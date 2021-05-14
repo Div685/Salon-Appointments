@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+// eslint-disable-next-line no-unused-vars
+import { loggedIn } from './api/request';
 
 ReactDOM.render(
   <React.StrictMode>
