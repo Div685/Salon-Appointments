@@ -7,7 +7,7 @@ ReactDOM.render(
   <React.StrictMode>
     <h1>Welcome to Salon</h1>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
 
 // If you want to start measuring performance in your app, pass a function
