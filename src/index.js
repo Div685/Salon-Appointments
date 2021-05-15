@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 import './index.css';
+import store from './redux/store';
 import reportWebVitals from './reportWebVitals';
-// eslint-disable-next-line no-unused-vars
-import { loggedIn } from './api/request';
 
 ReactDOM.render(
   <React.StrictMode>
-    <h1>Welcome to Salon</h1>
+    <Provider store={store}>
+      <h1>Welcome to Salon</h1>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root'),
 );
