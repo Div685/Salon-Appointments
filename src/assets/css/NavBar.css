@@ -1,0 +1,137 @@
+.header {
+  width: 100%;
+  text-align: center;
+  /* color: rgb(207, 204, 204)207, 204, 204); */
+  position: relative;
+}
+
+.nav__logo a{
+  color: #000;
+  font-size: 20px;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.nav span {
+  padding: 12px 0;
+}
+
+.nav a {
+  padding: 12px 0;
+}
+
+.nav a:hover {
+  background: #97BF12;
+  color: #fff;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 1px 5px rgba(#000, 0.2);
+  position: absolute;
+  background: #fff;
+  z-index: 99;
+  left: 0;
+  transform: translateY(-200%);
+  transition: all 0.25s;
+}
+
+nav.nav.active {
+  width: 100%;
+  transform: translateY(62%);
+}
+
+.nav__toggle {
+    cursor: pointer;
+}
+
+.nav__toggle button {
+  border: none;
+  background: transparent;
+}
+
+.nav__logo-tab {
+  display: none;
+}
+
+.logoutButton {
+  background: #97BF12;
+    color: #fff;
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+    .header {
+      width: 30%;
+      text-align: center;
+      /* color: rgb(207, 204, 204)207, 204, 204); */
+      position: relative;
+    }
+    
+    .nav__logo a{
+      color: #000;
+      font-size: 20px;
+    }
+    
+    a {
+      color: #000;
+      text-decoration: none;
+    }
+    
+    .nav span {
+      padding: 12px 0;
+    }
+    
+    .nav a {
+      padding: 12px 0;
+    }
+    
+    .nav a:hover {
+      background: #97BF12;
+      color: #fff;
+    }
+    
+    .nav {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 1px 1px 5px rgba(#000, 0.2);
+      position: absolute;
+      background: #fff;
+      z-index: 99;
+      left: 0;
+      transform: translateY(-200%);
+      transition: all 0.25s;
+    }
+    
+    nav.nav.active {
+      width: 100%;
+      transform: translateY(62%);
+    }
+    
+    .nav__toggle {
+        cursor: pointer;
+    }
+    
+    .nav__toggle button {
+      border: none;
+      background: transparent;
+    }
+    
+    .nav__logo-tab {
+      display: none;
+    }
+    
+    .logoutButton {
+      background: #97BF12;
+        color: #fff;
+    }
+}
