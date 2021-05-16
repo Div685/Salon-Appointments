@@ -37,6 +37,11 @@ const redirectLogin = async (userId) => {
 
 if (localStorage.token) {
   const decodedToken = decode(localStorage.token);
+  if (Date.now() >= decodedToken.exp * 1000) {
+    store.dispatch(logIn(false));
+    store.dispatch(signUp({}));
+    localStorage.clear();
+  }
   redirectLogin(decodedToken.user_id);
 } else {
   store.dispatch(logIn(false));

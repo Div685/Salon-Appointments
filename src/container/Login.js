@@ -53,7 +53,7 @@ const mapDispatchToProps = (dispatch) => ({
 
 Login.propTypes = {
   history: PropTypes.instanceOf(Object),
-  logIn: PropTypes.bool.isRequired,
+  logIn: PropTypes.func.isRequired,
   signUp: PropTypes.func,
   loginUser: PropTypes.bool.isRequired,
 };
