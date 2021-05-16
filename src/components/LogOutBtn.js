@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { logIn, signUp } from '../redux/actions';
+import '../assets/css/NavBar.css';
 
 const LogOutBtn = ({ logIn, signUp }) => {
   const handleLogout = () => {
@@ -10,7 +11,7 @@ const LogOutBtn = ({ logIn, signUp }) => {
     signUp({});
   };
   return (
-    <button type="button" onClick={handleLogout} className="btn btn-primary">Logout</button>
+    <button type="button" onClick={handleLogout} className="btn logoutButton">Logout</button>
   );
 };
 
