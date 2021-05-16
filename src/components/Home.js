@@ -1,39 +1,32 @@
 import React from 'react';
-// eslint-disable-next-line no-unused-vars
 import PropTypes from 'prop-types';
-// import { connect } from 'react-redux';
-import { useSelector } from 'react-redux';
+import { connect } from 'react-redux';
+// import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import LogOutBtn from './LogOutBtn';
 
-const Home = () => {
-  const loginUser = useSelector((state) => state.user.logIn);
-  return (
-    <div>
-      <div className="content">
-        <h1>Welcome to the Salon</h1>
-        { loginUser ? <LogOutBtn /> : (
-          <div className="userLoginSignup">
-            <button type="button">LogIn</button>
-            <button type="button">SignUp</button>
-          </div>
-        )}
-      </div>
-
+const Home = ({ loginUser }) => (
+  // const loginUser = useSelector((state) => state.user.logIn);
+  <div>
+    <div className="content">
+      <h1>Welcome to the Salon</h1>
+      { loginUser ? <LogOutBtn /> : (
+        <div className="userLoginSignup">
+          <Link to="/login" className="btn mb2 dark">Login</Link>
+          <Link to="/signup" className="btn mb2 medium">Signup</Link>
+        </div>
+      )}
     </div>
-  );
-};
 
+  </div>
+);
 Home.propTypes = {
-  // loginUser: PropTypes.bool.isRequired,
+  loginUser: PropTypes.bool.isRequired,
 };
 
-// const mapStateToProps = (state) => ({
+const mapStateToProps = (state) => ({
+  loginUser: state.user.logIn,
+});
 
-// });
-
-// const mapDispatchToProps = {
-
-// };
-
-// export default connect(mapStateToProps, mapDispatchToProps)(Home);
-export default Home;
+export default connect(mapStateToProps)(Home);
+// export default Home;
