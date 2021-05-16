@@ -6,8 +6,14 @@ export const loggedIn = async (username, password) => {
   return response;
 };
 
-export const signUp = async (username, password) => {
+export const signedUp = async (username, password) => {
   const response = await authAxios.post('users', { user: { username, password } })
+    .then((response) => response.data).catch((error) => error);
+  return response;
+};
+
+export const redirectToHome = async (userId) => {
+  const response = await authAxios.post('autoLogin', { user: { userId } })
     .then((response) => response.data).catch((error) => error);
   return response;
 };
