@@ -34,7 +34,7 @@ const SignUp = ({
 
   return loginUser ? <Redirect to="/items" /> : (
     <div>
-      {message && <p className="info-msg">{message}</p>}
+      {message && message.map((msg) => (<p key={msg}>{msg}</p>))}
       <h2>Sign up</h2>
       <UserForm handleSubmit={handleSubmit} btnName="Sign Up" />
       <Link to="/" className="btn">Home</Link>
@@ -61,7 +61,7 @@ SignUp.propTypes = {
 SignUp.defaultProps = {
   history: null,
   logIn: null,
-  signUp: {},
+  signUp: null,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(SignUp);
