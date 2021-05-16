@@ -13,7 +13,7 @@ export const signedUp = async (username, password) => {
 };
 
 export const redirectToHome = async (userId) => {
-  const response = await authAxios.post('autoLogin', { user: { userId } })
+  const response = await authAxios.post('login/autoLogin', { user: { user_id: userId } })
     .then((response) => response.data).catch((error) => error);
   return response;
 };
