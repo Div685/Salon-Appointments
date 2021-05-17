@@ -53,7 +53,7 @@ const SalonDetails = () => {
 
   return (
     <div>
-      {message && <p className="error-msg">{message}</p>}
+      {message && <p className="error-msg d-flex p-3 justify-content-center bg-danger text-white">{message}</p>}
       {
         item
           ? (

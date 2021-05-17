@@ -51,6 +51,7 @@ const NavBar = () => {
           <>
             <span>{`Welcome ${user.user.username}`}</span>
             <NavLink exact to="/items" onClick={closeToggle}>Items</NavLink>
+            <NavLink exact to="/appointments" onClick={closeToggle}>Appointments</NavLink>
             <NavLink exact to="/" onClick={closeToggle}>LifeStyle</NavLink>
             <NavLink exact to="/" onClick={closeToggle}>Shop</NavLink>
             <LogOutBtn />
