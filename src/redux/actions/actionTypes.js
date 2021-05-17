@@ -12,3 +12,6 @@ export const ADD_APPOINTMENTS = 'ADD_APPOINTMENTS';
 // Appointment date
 export const ADD_APPOINTMENT_DATES = 'ADD_APPOINTMENT_DATES';
 export const REMOVE_APPOINTMENT_DATES = 'REMOVE_APPOINTMENT_DATES';
+
+// List of Branches
+export const branches = ['Main Branch', '2nd Branch', 'Sparkles Salon', 'Face Massage', 'Street Rd Salon', 'Sci-fi Salon'];
