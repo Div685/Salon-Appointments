@@ -1,5 +1,5 @@
 import store from '../redux/store';
-import { addItems, addSingleItem } from '../redux/actions';
+import { addItems, addSingleItem, addAppointmentItems } from '../redux/actions';
 import authAxios from './request';
 
 export const fetchItemList = async () => {
@@ -16,6 +16,6 @@ export const fetchItemDetail = async (id) => {
 
 export const fetchUserAppointments = async () => {
   const response = await authAxios.get('appointments')
-    .then((response) => response.data).catch((error) => error);
+    .then((response) => store.dispatch(addAppointmentItems(response.data))).catch((error) => error);
   return response;
 };
