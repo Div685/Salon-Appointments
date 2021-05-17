@@ -2,6 +2,7 @@ import {
   LOG_IN,
   SIGN_UP,
   ADD_ITEMS,
+  ADD_SINGLE_ITEM,
   ADD_APPOINTMENTS,
   ADD_APPOINTMENT_DATES,
   REMOVE_APPOINTMENT_DATES,
@@ -20,6 +21,11 @@ export const signUp = (user = {}) => ({
 export const addItems = (items = []) => ({
   type: ADD_ITEMS,
   items,
+});
+
+export const addSingleItem = (item = {}) => ({
+  type: ADD_SINGLE_ITEM,
+  item,
 });
 
 export const addAppointments = (appointments = []) => ({
