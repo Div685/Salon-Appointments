@@ -17,3 +17,9 @@ export const redirectToHome = async (userId) => {
     .then((response) => response.data).catch((error) => error);
   return response;
 };
+
+export const bookAppointment = async (date, id, userId) => {
+  const response = await authAxios.post('appointments', { appointment: { date, item_id: id, user_id: userId } })
+    .then((response) => response.data).catch((error) => error);
+  return response;
+};
