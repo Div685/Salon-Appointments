@@ -5,16 +5,25 @@ import Item from '../components/Item';
 
 const SalonItemList = () => {
   const items = useSelector((state) => state.items.items);
-  console.log(items);
   useEffect(() => {
     fetchItemList();
   }, []);
+
+  const heatMap = () => {
+
+  };
 
   return (
     <div className="items">
       <h1>Welcome to Salon Item Lists</h1>
       <p>Please select Items to Book an appointment with us.</p>
-      <Item />
+      {
+        items && items.length
+          ? items.map((item) => (
+            <Item key={item.id} item={item} />
+          ))
+          : (heatMap())
+      }
     </div>
   );
 };
