@@ -13,3 +13,9 @@ export const fetchItemDetail = async (id) => {
     .then((response) => store.dispatch(addSingleItem(response.data))).catch((error) => error);
   return response;
 };
+
+export const fetchUserAppointments = async () => {
+  const response = await authAxios.get('appointments')
+    .then((response) => response.data).catch((error) => error);
+  return response;
+};

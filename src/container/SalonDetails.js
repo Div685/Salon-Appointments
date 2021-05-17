@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import decode from 'jwt-decode';
 import { fetchItemDetail } from '../api/fetchItems';
 import ItemDetails from '../components/ItemDetails';
@@ -10,6 +10,7 @@ import { addAppointments } from '../redux/actions';
 
 const SalonDetails = () => {
   const item = useSelector((state) => state.item.item);
+  const history = useHistory();
   const { id } = useParams();
   const [message, setMessage] = useState('');
 
@@ -17,12 +18,13 @@ const SalonDetails = () => {
     fetchItemDetail(id);
   }, []);
 
-  const handleBookAppointment = async (date, userId) => {
+  const handleBookAppointment = async (date, userId, branch) => {
     try {
-      const response = await bookAppointment(date, id, userId);
-      if (response.status === 'created') {
+      const response = await bookAppointment(date, id, userId, branch);
+      if (response.status === 'Created') {
         setMessage('Successfully Booked your Appointment');
-        addAppointments(response.appointments);
+        addAppointments(response);
+        history.push(`/items/${id}`);
       } else {
         setMessage(response.message);
       }
@@ -31,11 +33,11 @@ const SalonDetails = () => {
     }
   };
 
-  const handleSubmit = (date) => {
+  const handleSubmit = (date, branch) => {
     if (localStorage.token) {
       const decodedToken = decode(localStorage.token);
       const { userId } = decodedToken;
-      handleBookAppointment(date, userId);
+      handleBookAppointment(date, userId, branch);
     } else {
       setMessage('Please Login to Book an Appointment');
     }
