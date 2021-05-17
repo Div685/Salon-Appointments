@@ -4,7 +4,7 @@ import {
   ADD_ITEMS,
   ADD_SINGLE_ITEM,
   ADD_APPOINTMENTS,
-  ADD_APPOINTMENT_DATES,
+  ADD_APPOINTMENT_ITEMS,
   REMOVE_APPOINTMENT_DATES,
 } from './actionTypes';
 
@@ -33,9 +33,9 @@ export const addAppointments = (appointments = []) => ({
   appointments,
 });
 
-export const addAppointmentDates = (appointmentDates = []) => ({
-  type: ADD_APPOINTMENT_DATES,
-  appointmentDates,
+export const addAppointmentItems = (appointmentItems = []) => ({
+  type: ADD_APPOINTMENT_ITEMS,
+  appointmentItems,
 });
 
 export const removeAppointmentDates = () => ({
