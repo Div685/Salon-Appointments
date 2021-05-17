@@ -5,6 +5,7 @@ import SalonItemList from '../container/SalonItemList';
 import Login from '../container/Login';
 import SignUp from '../container/SignUp';
 import NavBar from './NavBar';
+import SalonDetails from '../container/SalonDetails';
 
 const Routes = () => (
   <BrowserRouter>
@@ -14,6 +15,7 @@ const Routes = () => (
       <Route exact path="/login" render={(props) => (<Login history={props.history} />)} />
       <Route exact path="/signup" render={(props) => (<SignUp history={props.history} />)} />
       <Route exact path="/items" component={SalonItemList} />
+      <Route exact path="/items/:id" component={SalonDetails} />
     </Switch>
   </BrowserRouter>
 );
