@@ -37,7 +37,7 @@ const SignUp = ({
       {message && message.map((msg) => (<p key={msg}>{msg}</p>))}
       <h2>Sign up</h2>
       <UserForm handleSubmit={handleSubmit} btnName="Sign Up" />
-      <Link to="/" className="btn">Home</Link>
+      <Link to="/login" className="btn">Log in</Link>
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import '../assets/css/UserForm.css';
 
 const UserForm = ({ handleSubmit, btnName }) => {
   const [userName, setUserName] = useState('');
@@ -11,7 +12,7 @@ const UserForm = ({ handleSubmit, btnName }) => {
   };
 
   return (
-    <div className="form_section">
+    <div className="form__section">
       <form className="form" onSubmit={onSubmitForm}>
         <input
           className="form_input"

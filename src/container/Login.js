@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Redirect } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import { loggedIn } from '../api/authUserRequest';
 import UserForm from '../components/UserForm';
 import { logIn, signUp } from '../redux/actions';
@@ -38,6 +38,7 @@ const Login = ({
       {message && message.map((msg) => (<p key={msg}>{msg}</p>))}
       <h2>Login</h2>
       <UserForm handleSubmit={handleSubmit} btnName="LogIn" />
+      <Link to="/signup" className="btn">Sign up</Link>
     </div>
   );
 };
