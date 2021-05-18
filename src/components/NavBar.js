@@ -28,10 +28,10 @@ const NavBar = () => {
   };
 
   return (
-    <header className="header d-flex justify-content-between p-2 align-items-center">
+    <header className="header">
       <div className="nav__logo">
         <Link to="/">
-          BookMySalon
+          <h3>BookMySalon</h3>
         </Link>
       </div>
       <div className="nav__toggle">

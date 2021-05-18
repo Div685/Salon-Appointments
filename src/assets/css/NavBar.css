@@ -66,16 +66,25 @@ nav.nav.active {
 
 @media only screen 
   and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
+  and (max-device-width: 1024px) {
 
     .header {
-      width: 30%;
+      /* width: 20%;
       text-align: center;
-      /* color: rgb(207, 204, 204)207, 204, 204); */
-      position: relative;
+      position: fixed;
+      height: 100%;
+      background: #fff;
+      left: 0;
+      z-index: 999; */
+      background: #888;
+    height: 100vh;
+    padding: 25px 0;
     }
     
+    .nav__logo {
+      display: block;
+    }
+
     .nav__logo a{
       color: #000;
       font-size: 20px;
@@ -92,6 +101,10 @@ nav.nav.active {
     
     .nav a {
       padding: 12px 0;
+      width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center
     }
     
     .nav a:hover {
@@ -100,15 +113,12 @@ nav.nav.active {
     }
     
     .nav {
-      width: 100%;
       display: flex;
       flex-direction: column;
-      box-shadow: 1px 1px 5px rgba(#000, 0.2);
-      position: absolute;
       background: #fff;
-      z-index: 99;
-      left: 0;
-      transform: translateY(-200%);
+      transform: translateY(200%);
+      justify-content: center;
+      align-items: center;
       transition: all 0.25s;
     }
     
@@ -119,6 +129,7 @@ nav.nav.active {
     
     .nav__toggle {
         cursor: pointer;
+        display: none;
     }
     
     .nav__toggle button {
