@@ -21,7 +21,7 @@ describe('ItemsReducer', () => {
     expect(ItemsReducer(undefined, {})).toEqual(initialState);
   });
 
-  it('should check FETCH_PHOTOS_SUCCESS Action', () => {
+  it('should check ADD_ITEMS Action', () => {
     const result = ItemsReducer(initialState, itemAction);
     expect(result.items).toEqual(exampleItems);
   });
