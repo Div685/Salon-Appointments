@@ -1,0 +1,52 @@
+.items {
+
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) {
+
+    .items {
+      display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh
+    }
+
+    .items__header {
+      text-align: center;
+    }
+
+    .items__Lists {
+      display: flex;
+      padding: 20px;
+      overflow-y: hidden;
+      overflow-x: scroll;
+      align-items: center;
+      width: 100%;
+    }
+
+    figure {
+      margin: 0;
+      border: 1px solid #aaa;
+    border-radius: 50%;
+    background: #EFEFEF;
+    }
+
+    .item {
+      margin-right: 12px;
+    }
+    
+    .item figure img {
+      margin-right: 10px;
+      max-height: 250px
+    }
+
+    figcaption {
+      font-size: 26px;
+    text-align: center;
+    text-transform: capitalize;
+    padding: 10px 0;
+    }
+  }
