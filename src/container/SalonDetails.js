@@ -43,13 +43,13 @@ const SalonDetails = () => {
     }
   };
 
-  const heatMap = () => {
+  const heatMap = () => (
     <div>
       <h1>
         Loading...
       </h1>
-    </div>;
-  };
+    </div>
+  );
 
   return (
     <div>

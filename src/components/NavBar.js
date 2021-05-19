@@ -41,23 +41,17 @@ const NavBar = () => {
           ) : (<CancelIcon />) }
         </button>
       </div>
-      <nav className={`nav${toggleNavClass}`}>
-        <div className="nav__logo-tab">
-          <Link to="/">
-            BookMySalon
-          </Link>
-        </div>
+      <nav className="nav">
         {isLoggedIn ? (
-          <div className="nav__items">
+          <div className={`nav__items${toggleNavClass}`}>
             <span>{`Welcome ${user.user.username}`}</span>
             <NavLink exact to="/items" activeClassName="selected" onClick={closeToggle}>Items</NavLink>
             <NavLink exact to="/appointments" activeClassName="selected" onClick={closeToggle}>Appointments</NavLink>
             <NavLink exact to="/" activeClassName="selected" onClick={closeToggle}>LifeStyle</NavLink>
-            <NavLink exact to="/" activeClassName="selected" onClick={closeToggle}>Shop</NavLink>
             <LogOutBtn />
           </div>
         ) : (
-          <div className="nav__auth">
+          <div className={`nav__auth${toggleNavClass}`}>
             <NavLink exact to="/login" activeClassName="selected" onClick={closeToggle}>Login</NavLink>
             <NavLink exact to="/signup" activeClassName="selected" onClick={closeToggle}>Sing Up</NavLink>
           </div>

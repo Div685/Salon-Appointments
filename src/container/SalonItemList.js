@@ -6,13 +6,14 @@ import '../assets/css/SalonItems.css';
 
 const SalonItemList = () => {
   const items = useSelector((state) => state.items.items);
+
   useEffect(() => {
     fetchItemList();
   }, []);
 
-  const heatMap = () => {
-    <h1>Loading...</h1>;
-  };
+  const heatMap = () => (
+    <h1>Loading...</h1>
+  );
 
   return (
     <div className="items">
