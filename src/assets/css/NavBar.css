@@ -1,13 +1,16 @@
 .header {
   width: 100%;
   text-align: center;
-  /* color: rgb(207, 204, 204)207, 204, 204); */
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
 }
 
-.nav__logo a{
-  color: #000;
-  font-size: 20px;
+.nav__logo a h3 {
+  color: #7ea500;
+  font-size: 26px;
+  font-weight: 900;
+  text-shadow: 2px 10px 5px #bcf500;
 }
 
 a {
@@ -41,9 +44,32 @@ a {
   transition: all 0.25s;
 }
 
-nav.nav.active {
+.nav__auth {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav__items {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav__items.active {
   width: 100%;
-  transform: translateY(62%);
+  display: flex;
+  flex-direction: column;
+  transform: translateY(217%);
+  width: 100%;
+  background: #fff;
+}
+
+.nav__auth.active {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(235%);
+  width: 100%;
+  background: #fff;
 }
 
 .nav__toggle {
@@ -61,8 +87,13 @@ nav.nav.active {
 
 .logoutButton {
   background: #97BF12;
-    color: #fff;
+  color: #fff;
 }
+
+
+
+
+/* LandScap Tab view */
 
 @media only screen 
   and (min-device-width: 768px) 
@@ -70,7 +101,7 @@ nav.nav.active {
 
     .header {
       background: #fff;
-      height: 100vh;
+      height: 105vh;
       padding: 25px 0;
       box-shadow: 3px 7px #d3d3d3;
     }
@@ -124,6 +155,110 @@ nav.nav.active {
     margin: 0 0 0 20px;
     text-align: justify;
     font-size: 23px
+    }
+
+    .nav__auth {
+      transform: translateY(375%);
+    transition: all 0.25s;
+    margin: 0 0 0 20px;
+    text-align: justify;
+    font-size: 32px;
+    font-weight: 500;
+    }
+
+    nav.nav.active {
+      width: 100%;
+      transform: translateY(62%);
+    }
+    
+    .nav__toggle {
+        cursor: pointer;
+        display: none;
+    }
+    
+    .nav__toggle button {
+      border: none;
+      background: transparent;
+    }
+    
+    .nav__logo-tab {
+      display: none;
+    }
+    
+    .logoutButton {
+      background: #97BF12;
+        color: #fff;
+        width: 100%;
+    text-align: justify;
+    font-size: 22px;
+    }
+
+    .selected {
+      background: #97BF12;
+      color: #fff;
+      font-weight: bold;
+    }
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) {
+
+    .header {
+      background: #fff;
+      height: 107vh;
+      padding: 25px 0;
+      box-shadow: 3px 7px #d3d3d3;
+    }
+    
+    .nav__logo {
+      display: block;
+    }
+
+    .nav__logo a h3{
+      color: #7ea500;
+    font-size: 26px;
+    font-weight: 900;
+    text-shadow: 2px 10px 5px #bcf500;
+    }
+    
+    a {
+      color: #000;
+      text-decoration: none;
+    }
+    
+    .nav span {
+      padding: 12px 16px;
+      font-size: 23px;
+    }
+    
+    .nav a {
+      padding: 12px 16px;
+      width: 100%;
+    display: flex;
+    text-align: justify;
+    }
+    
+    .nav a:hover {
+      background: #97BF12;
+      color: #fff;
+    }
+    
+    .nav {
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      justify-content: center;
+      transition: all 0.25s;
+    }
+    
+    .nav__items {
+      transform: translateY(300%);
+    transition: all 0.25s;
+    margin: 0 0 0 20px;
+    text-align: justify;
+    font-size: 22px
     }
 
     .nav__auth {

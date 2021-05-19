@@ -1,6 +1,49 @@
 .items {
-
+  background: #fafafa;
+  padding: 20px 0;
 }
+
+.items .items__header {
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.item  {
+  padding: 10px 0;
+  margin: 10px 0;
+}
+
+.item figure img {
+  width: 100%;
+  padding: 10px;
+    background-size: cover;
+    background-position: center;
+    max-height: 250px;
+}
+
+.item figcaption {
+  font-weight: 500;
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+   text-overflow: ellipsis;
+   color: #97BF12;
+}
+
+.item__socialMedia {
+  display: flex;
+  justify-content: center;
+}
+
+.MuiSvgIcon-root {
+  margin: 0 10px 0 0;
+}
+
+/* Landscape mode Tab */
 
 @media only screen 
   and (min-device-width: 768px) 
@@ -11,7 +54,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh
+    height: 100vh;
+    background: #fafafa;
     }
 
     .items__header {
@@ -62,9 +106,13 @@
 
     figcaption {
       font-size: 26px;
-    text-align: center;
-    text-transform: capitalize;
-    padding: 10px 0;
+      text-align: center;
+      text-transform: capitalize;
+      padding: 10px 0;
+      width: 250px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis
     }
 
     .item__socialMedia {
@@ -84,4 +132,23 @@
       width: 1.7em !important;
     }
 
+  }
+
+  @media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) { 
+
+    .items__Lists {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px;
+    }
+
+    .item figure img {
+      border-radius: 50%;
+    }
+
+    .item figcaption {
+      color: #97BF12;
+    }
   }

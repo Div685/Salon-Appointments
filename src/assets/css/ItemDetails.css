@@ -1,15 +1,77 @@
+/* Mobile  */
+.itemDetails {
+  display: flex;
+  flex-direction: column;
+    width: 100%;
+    padding: 10px;
+}
+
+.itemDetails img {
+  width: 100%;
+  max-height: 200px;
+}
+
+.item__title {
+  font-size: 26px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.item__price p:nth-child(odd) {
+  background-color: #ccc;
+  padding: 10px;
+}
+
+.bookAppointment h3 {
+  text-align: center;
+}
+
+.bookAppointment span {
+  text-align: center;
+  padding: 10px;
+}
+
+.appointmentForm {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.appointmentForm input {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.appointmentForm select {
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.appointmentForm button {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background: #97BF12;
+  color: #fff;
+  font-size: 20px;
+}
+
+/* LandScape Tab view */
+
 @media only screen 
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) {
 
   .itemDetails {
     display: flex;
+    flex-direction: row;
       width: 100%;
       padding: 2rem;
   }
   
   .itemDetails img {
-    height: 504px;
+    max-height: 504px;
       border-radius: 50%;
   }
   
@@ -79,7 +141,7 @@
   .appointmentForm select {
     padding: 14px;
       border-radius: 10px;
-      margin: 0 10px;
+      margin: 20px 0;
       font-size: 20px;
       background: transparent;
       border: none;
@@ -96,3 +158,212 @@
       box-shadow: 0 8px 16px 0 #ccc;
   }
 }
+
+/* Potrait Screen Tab view */
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) {
+    
+    .itemDetails {
+      display: flex;
+        width: 100%;
+        padding: 5rem 2rem;
+        flex-direction: row;
+    }
+    
+    .itemDetails img {
+      max-height: 400px;
+        border-radius: 50%;
+    }
+    
+    .item__details {
+      align-items: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 23px 0;
+    }
+    
+    .item__title {
+      font-size: 50px;
+        text-transform: UPPERCASE;
+        margin: 0;
+        font-weight: 930;
+    }
+    
+    .item__desc {
+      font-size: 20px;
+    }
+    
+    .item__price {
+      width: 100%;
+        margin: 0 0 0 20px
+    }
+    
+    .item__price p {
+        padding: 12px;
+        font-size: 20px;
+    }
+    
+    .item__price p:nth-child(odd) {
+      background: #ccc;
+    }
+    
+    .bookAppointment {
+      padding: 0.7rem 3rem;
+    }
+  
+    .bookAppointment h3 {
+      display: flex;
+      justify-content: center;
+      font-size: 40px;
+      font-weight: 700;
+      text-transform: UPPERCASE;
+    }
+  
+    .bookAppointment span {
+      display: flex;
+      justify-content: center;
+      font-size: 18px;
+    }
+    
+    .appointmentForm {
+      margin: 20px 0;
+      display: flex;
+    flex-direction: column;
+    }
+    
+    .appointmentForm input {
+      padding: 14px;
+        border-radius: 10px;
+        font-size: 20px;
+        border: none;
+        box-shadow: 0 8px 16px 0 #ccc;
+    }
+    
+    .appointmentForm select {
+      padding: 14px;
+        border-radius: 10px;
+        margin: 20px 0;
+        font-size: 20px;
+        background: transparent;
+        border: none;
+        box-shadow: 0 8px 16px 0 #ccc;
+    }
+    
+    .appointmentForm button {
+      padding: 14px;
+        border-radius: 10px;
+        background: #97BF12;
+        color: #fff;
+        font-size: 20px;
+        border: none;
+        box-shadow: 0 8px 16px 0 #ccc;
+    }
+  }
+
+  @media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) { 
+
+    .itemDetails {
+      display: flex;
+      flex-direction: row;
+        width: 100%;
+        padding: 2rem;
+    }
+    
+    .itemDetails img {
+      max-height: 400px;
+        border-radius: 50%;
+    }
+    
+    .item__details {
+      align-items: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 23px 0;
+    }
+    
+    .item__title {
+      font-size: 50px;
+        text-transform: UPPERCASE;
+        margin: 0;
+        font-weight: 930;
+    }
+    
+    .item__desc {
+      font-size: 20px;
+    }
+    
+    .item__price {
+      width: 100%;
+        margin: 0 0 0 20px
+    }
+    
+    .item__price p {
+        padding: 12px;
+        font-size: 20px;
+    }
+    
+    .item__price p:nth-child(odd) {
+      background: #ccc;
+    }
+    
+    .bookAppointment {
+      padding: 0.7rem 3rem;
+    }
+  
+    .bookAppointment h3 {
+      display: flex;
+      justify-content: center;
+      font-size: 40px;
+      font-weight: 700;
+      text-transform: UPPERCASE;
+    }
+  
+    .bookAppointment span {
+      display: flex;
+      justify-content: center;
+      font-size: 18px;
+    }
+    
+    .appointmentForm {
+      margin: 20px 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+    
+    .appointmentForm input {
+      padding: 14px;
+        border-radius: 10px;
+        font-size: 20px;
+        border: none;
+        box-shadow: 0 8px 16px 0 #ccc;
+    }
+    
+    .appointmentForm select {
+      padding: 14px;
+        border-radius: 10px;
+        margin: 0 20px;
+        font-size: 20px;
+        background: transparent;
+        border: none;
+        box-shadow: 0 8px 16px 0 #ccc;
+    }
+    
+    .appointmentForm button {
+      padding: 14px;
+        border-radius: 10px;
+        background: #97BF12;
+        color: #fff;
+        font-size: 20px;
+        border: none;
+        box-shadow: 0 8px 16px 0 #ccc;
+    }
+
+  }
