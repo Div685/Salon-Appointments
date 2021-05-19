@@ -69,25 +69,21 @@ nav.nav.active {
   and (max-device-width: 1024px) {
 
     .header {
-      /* width: 20%;
-      text-align: center;
-      position: fixed;
-      height: 100%;
       background: #fff;
-      left: 0;
-      z-index: 999; */
-      background: #888;
-    height: 100vh;
-    padding: 25px 0;
+      height: 100vh;
+      padding: 25px 0;
+      box-shadow: 3px 7px #d3d3d3;
     }
     
     .nav__logo {
       display: block;
     }
 
-    .nav__logo a{
-      color: #000;
-      font-size: 20px;
+    .nav__logo a h3{
+      color: #7ea500;
+    font-size: 33px;
+    font-weight: 900;
+    text-shadow: 2px 10px 5px #bcf500;
     }
     
     a {
@@ -144,5 +140,11 @@ nav.nav.active {
     .logoutButton {
       background: #97BF12;
         color: #fff;
+    }
+
+    .selected {
+      background: #97BF12;
+      color: #fff;
+      font-weight: bold;
     }
 }

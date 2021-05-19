@@ -18,6 +18,16 @@
       text-align: center;
     }
 
+    .items__header h1 {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 50px;
+    }
+
+    .items__header p {
+      font-size: 20px;
+    }
+
     .items__Lists {
       display: flex;
       padding: 20px;
