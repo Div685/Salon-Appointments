@@ -40,57 +40,42 @@ exports[`NavBar Component renders NavBar page correctly 1`] = `
     className="nav"
   >
     <div
-      className="nav__logo-tab"
+      className="nav__items"
     >
+      <span>
+        Welcome undefined
+      </span>
       <a
-        href="/"
+        aria-current={null}
+        href="/items"
         onClick={[Function]}
       >
-        BookMySalon
+        Items
       </a>
+      <a
+        aria-current={null}
+        href="/appointments"
+        onClick={[Function]}
+      >
+        Appointments
+      </a>
+      <a
+        aria-current="page"
+        className="selected"
+        href="/"
+        onClick={[Function]}
+        style={Object {}}
+      >
+        LifeStyle
+      </a>
+      <button
+        className="btn logoutButton"
+        onClick={[Function]}
+        type="button"
+      >
+        Logout
+      </button>
     </div>
-    <span>
-      Welcome undefined
-    </span>
-    <a
-      aria-current={null}
-      href="/items"
-      onClick={[Function]}
-    >
-      Items
-    </a>
-    <a
-      aria-current={null}
-      href="/appointments"
-      onClick={[Function]}
-    >
-      Appointments
-    </a>
-    <a
-      aria-current="page"
-      className="active"
-      href="/"
-      onClick={[Function]}
-      style={Object {}}
-    >
-      LifeStyle
-    </a>
-    <a
-      aria-current="page"
-      className="active"
-      href="/"
-      onClick={[Function]}
-      style={Object {}}
-    >
-      Shop
-    </a>
-    <button
-      className="btn logoutButton"
-      onClick={[Function]}
-      type="button"
-    >
-      Logout
-    </button>
   </nav>
 </header>
 `;

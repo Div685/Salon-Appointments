@@ -2,14 +2,14 @@
 
 exports[`UsersForm should match with snapshot 1`] = `
 <div
-  className="form_section"
+  className="form__section"
 >
   <form
     className="form"
     onSubmit={[Function]}
   >
     <input
-      className="form_input"
+      className="form__input"
       name="username"
       onChange={[Function]}
       placeholder="Username"
@@ -17,7 +17,7 @@ exports[`UsersForm should match with snapshot 1`] = `
       value=""
     />
     <input
-      className="form_input"
+      className="form__input"
       name="password"
       onChange={[Function]}
       placeholder="password"
@@ -25,7 +25,7 @@ exports[`UsersForm should match with snapshot 1`] = `
       value=""
     />
     <button
-      className="btn "
+      className="btn__login"
       type="submit"
     >
       Signup
