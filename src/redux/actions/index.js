@@ -5,7 +5,9 @@ import {
   ADD_SINGLE_ITEM,
   ADD_APPOINTMENTS,
   ADD_APPOINTMENT_ITEMS,
-  REMOVE_APPOINTMENT_DATES,
+  REMOVE_SINGLE_ITEM,
+  REMOVE_ITEMS,
+  REMOVE_APPOINTMENT_ITEMS,
 } from './actionTypes';
 
 export const logIn = (logIn = true) => ({
@@ -23,9 +25,17 @@ export const addItems = (items = []) => ({
   items,
 });
 
+export const removeItems = () => ({
+  type: REMOVE_ITEMS,
+});
+
 export const addSingleItem = (item = {}) => ({
   type: ADD_SINGLE_ITEM,
   item,
+});
+
+export const removeSingleItem = () => ({
+  type: REMOVE_SINGLE_ITEM,
 });
 
 export const addAppointments = (appointments = []) => ({
@@ -38,6 +48,6 @@ export const addAppointmentItems = (appointmentItems = []) => ({
   appointmentItems,
 });
 
-export const removeAppointmentDates = () => ({
-  type: REMOVE_APPOINTMENT_DATES,
+export const removeAppointmentItems = () => ({
+  type: REMOVE_APPOINTMENT_ITEMS,
 });
