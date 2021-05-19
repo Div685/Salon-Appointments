@@ -6,6 +6,7 @@ import { Link, Redirect } from 'react-router-dom';
 import { loggedIn } from '../api/authUserRequest';
 import UserForm from '../components/UserForm';
 import { logIn, signUp } from '../redux/actions';
+import '../assets/css/LogIn.css';
 
 const Login = ({
   logIn, signUp, history, loginUser,
@@ -34,11 +35,11 @@ const Login = ({
   };
 
   return loginUser ? <Redirect to="/items" /> : (
-    <div>
+    <div className="LogIn">
       {message && message.map((msg) => (<p key={msg}>{msg}</p>))}
       <h2>Login</h2>
       <UserForm handleSubmit={handleSubmit} btnName="LogIn" />
-      <Link to="/signup" className="btn">Sign up</Link>
+      <Link to="/signup" className="btn__signup">Sign up</Link>
     </div>
   );
 };
