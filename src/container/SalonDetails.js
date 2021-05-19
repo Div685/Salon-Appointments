@@ -44,10 +44,21 @@ const SalonDetails = () => {
   };
 
   const heatMap = () => (
-    <div>
-      <h1>
-        Loading...
-      </h1>
+    <div className="heatmap__details">
+      <div className="heatmap__details-up">
+        <div className="heatmap__details-img" />
+        <div>
+          <div className="heatmap__details-title" />
+          <div className="heatmap__details-title" />
+          <div className="heatmap__details-title" />
+        </div>
+      </div>
+
+      <div className="heatmap__appointment">
+        <div className="title1" />
+        <div className="title2" />
+        <div className="title3" />
+      </div>
     </div>
   );
 

@@ -13,11 +13,31 @@ const AppointmentLists = () => {
   }, []);
 
   const heatMap = () => (
-    <div>
-      <h1>
-        Loading...
-      </h1>
-    </div>
+    <>
+      <div className="heatmap__appointments">
+        <div className="heatmap__app-img" />
+        <div className="heatmap__right">
+          <div className="heatmap__title2" />
+          <div className="heatmap__title3" />
+        </div>
+      </div>
+
+      <div className="heatmap__appointments">
+        <div className="heatmap__app-img" />
+        <div className="heatmap__right">
+          <div className="heatmap__title2" />
+          <div className="heatmap__title3" />
+        </div>
+      </div>
+
+      <div className="heatmap__appointments">
+        <div className="heatmap__app-img" />
+        <div className="heatmap__right">
+          <div className="heatmap__title2" />
+          <div className="heatmap__title3" />
+        </div>
+      </div>
+    </>
   );
 
   const appointmentMap = () => (

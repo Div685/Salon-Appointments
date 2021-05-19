@@ -12,7 +12,23 @@ const SalonItemList = () => {
   }, []);
 
   const heatMap = () => (
-    <h1>Loading...</h1>
+    <>
+      <div className="heatmap__items">
+        <div className="heatmap__image" />
+        <div className="heatmap__title" />
+      </div>
+
+      <div className="heatmap__items">
+        <div className="heatmap__image" />
+        <div className="heatmap__title" />
+      </div>
+
+      <div className="heatmap__items">
+        <div className="heatmap__image" />
+        <div className="heatmap__title" />
+      </div>
+
+    </>
   );
 
   return (

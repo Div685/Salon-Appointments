@@ -131,6 +131,111 @@
     height: 1.7em !important;
     width: 1.7em !important;
   }
+
+  /* Heat map */
+
+  .heatmap__items {
+    height: 250px;
+    margin: 20px 0;
+    width: 250px;
+  }
+
+  .heatmap__image {
+    margin-right: 10px;
+    height: 200px;
+    border-radius: 50%;
+    background: #e3e3e3;
+  }
+
+  .heatmap__title {
+    height: 30px;
+    background: #e3e3e3;
+    border-radius: 10px;
+    margin: 10px 10px;
+  }
+
+  .heatmap__details {
+    height: 300px;
+    width: 570px;
+    padding: 1rem;
+  }
+
+  .heatmap__details-up {
+    display: flex;
+    width: 530px;
+  }
+
+  .heatmap__details-img {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background: #e3e3e3;
+    margin: 0 12px 0px 0;
+  }
+
+  .heatmap__details-title {
+    height: 40px;
+    width: 200px;
+    background: #e3e3e3;
+    margin: 29px 0;
+  }
+
+  .heatmap__appointment {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    width: 540px;
+  }
+
+  .heatmap__appointment .title1 {
+    width: 500px;
+    background: #e3e3e3;
+    height: 75px;
+    border-radius: 10px;
+  }
+
+  .heatmap__appointment .title2 {
+    margin: 20px 0;
+    width: 300px;
+    background: #e3e3e3;
+    height: 45px;
+    border-radius: 10px;
+  }
+
+  .heatmap__appointment .title3 {
+    width: 300px;
+    background: #e3e3e3;
+    height: 45px;
+    border-radius: 10px;
+  }
+
+  .heatmap__appointments {
+    width: 550px;
+    height: 225px;
+    display: flex;
+  }
+
+  .heatmap__appointments .heatmap__app-img {
+    width: 350px;
+    height: 201px;
+    background: #e3e3e3;
+  }
+
+  .heatmap__appointments .heatmap__title2 {
+    width: 180px;
+    margin: 0 5px;
+    background: #e3e3e3;
+    height: 45px;
+    border-radius: 10px;
+  }
+
+  .heatmap__appointments .heatmap__title3 {
+    width: 180px;
+    margin: 15px 5px;
+    background: #e3e3e3;
+    height: 45px;
+    border-radius: 10px;
+  }
 }
 
 @media screen
