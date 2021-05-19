@@ -1,0 +1,98 @@
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) {
+
+  .itemDetails {
+    display: flex;
+      width: 100%;
+      padding: 2rem;
+  }
+  
+  .itemDetails img {
+    height: 504px;
+      border-radius: 50%;
+  }
+  
+  .item__details {
+    align-items: center;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 23px 0;
+  }
+  
+  .item__title {
+    font-size: 50px;
+      text-transform: UPPERCASE;
+      margin: 0;
+      font-weight: 930;
+  }
+  
+  .item__desc {
+    font-size: 20px;
+  }
+  
+  .item__price {
+    width: 100%;
+      margin: 0 0 0 20px
+  }
+  
+  .item__price p {
+      padding: 12px;
+      font-size: 20px;
+  }
+  
+  .item__price p:nth-child(odd) {
+    background: #ccc;
+  }
+  
+  .bookAppointment {
+    padding: 0.7rem 3rem;
+  }
+
+  .bookAppointment h3 {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: UPPERCASE;
+  }
+
+  .bookAppointment span {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+  }
+  
+  .appointmentForm {
+    margin: 20px 0;
+  }
+  
+  .appointmentForm input {
+    padding: 14px;
+      border-radius: 10px;
+      font-size: 20px;
+      border: none;
+      box-shadow: 0 8px 16px 0 #ccc;
+  }
+  
+  .appointmentForm select {
+    padding: 14px;
+      border-radius: 10px;
+      margin: 0 10px;
+      font-size: 20px;
+      background: transparent;
+      border: none;
+      box-shadow: 0 8px 16px 0 #ccc;
+  }
+  
+  .appointmentForm button {
+    padding: 14px;
+      border-radius: 10px;
+      background: #97BF12;
+      color: #fff;
+      font-size: 20px;
+      border: none;
+      box-shadow: 0 8px 16px 0 #ccc;
+  }
+}

@@ -13,7 +13,7 @@ const AppointmentLists = () => {
   }, []);
 
   const heatMap = () => {
-
+    <h1>Loading...</h1>;
   };
 
   const appointmentMap = () => (

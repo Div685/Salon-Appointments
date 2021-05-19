@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { branches } from '../redux/actions/actionTypes';
+import '../assets/css/ItemDetails.css';
 
 const BookAppointment = ({ handleSubmit }) => {
   const [date, setDate] = useState('');
@@ -13,9 +14,11 @@ const BookAppointment = ({ handleSubmit }) => {
 
   return (
     <div className="bookAppointment">
+      <h3>Book Appointment</h3>
+      <span>Book an Appointment now and get 5% discount</span>
       <form className="appointmentForm" onSubmit={onSubmitForm}>
         <input
-          className="form-control w-100 col-md-8 col-lg-4"
+          className="form_control"
           type="datetime-local"
           onChange={(event) => { setDate(event.target.value); }}
         />

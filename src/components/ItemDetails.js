@@ -1,13 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../assets/css/ItemDetails.css';
 
 const ItemDetails = ({ item }) => {
   const { name, description, img } = item;
   return (
     <div className="itemDetails">
       <img src={img} alt="img" />
-      <p>{name}</p>
-      <p>{description}</p>
+      <div className="item__details">
+        <p className="item__title">{name}</p>
+        <p className="item__desc">{description}</p>
+        <div className="item__price">
+          <p>Price: $20 </p>
+          <p>VAT 18%</p>
+          <p>Total: 23.6</p>
+        </div>
+      </div>
     </div>
   );
 };
