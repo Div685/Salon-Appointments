@@ -1,12 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-// import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import LogOutBtn from './LogOutBtn';
 
 const Home = ({ loginUser }) => (
-  // const loginUser = useSelector((state) => state.user.logIn);
   <div>
     <div className="content">
       <h1>Welcome to the Salon</h1>
@@ -29,4 +27,3 @@ const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps)(Home);
-// export default Home;
