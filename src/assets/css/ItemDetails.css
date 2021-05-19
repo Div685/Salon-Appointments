@@ -71,7 +71,8 @@
   }
   
   .itemDetails img {
-    max-height: 504px;
+    max-height: 400px;
+    width: 400px;
       border-radius: 50%;
   }
   
@@ -175,6 +176,7 @@
     
     .itemDetails img {
       max-height: 400px;
+      width: 300px;
         border-radius: 50%;
     }
     

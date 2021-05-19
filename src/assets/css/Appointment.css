@@ -17,6 +17,11 @@
       padding: 1rem;
     }
 
+    .Appointment {
+      display: flex;
+      flex-direction: row !important;
+    }
+
     .Appointment img {
       max-height: 150px;
       width: 60%;

@@ -91,6 +91,7 @@
     
     .item figure img {
       margin-right: 10px;
+      height: 250px;
       max-height: 250px;
       border-radius: 50%;
       box-shadow: 0 8px 16px 1px #ccc;

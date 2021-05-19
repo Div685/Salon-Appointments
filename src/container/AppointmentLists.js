@@ -12,9 +12,13 @@ const AppointmentLists = () => {
     fetchUserAppointments();
   }, []);
 
-  const heatMap = () => {
-    <h1>Loading...</h1>;
-  };
+  const heatMap = () => (
+    <div>
+      <h1>
+        Loading...
+      </h1>
+    </div>
+  );
 
   const appointmentMap = () => (
     <>

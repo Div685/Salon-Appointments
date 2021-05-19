@@ -24,7 +24,7 @@ const SalonDetails = () => {
       if (response.status === 'Created') {
         setMessage('Successfully Booked your Appointment');
         addAppointments(response);
-        history.push(`/items/${id}`);
+        history.push('/appointments');
       } else {
         setMessage(response.message);
       }
