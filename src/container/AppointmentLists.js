@@ -29,13 +29,15 @@ const AppointmentLists = () => {
   );
 
   return (
-    <div>
-      <h1>Your Appointments:</h1>
-      {
-        !logIn ? <Redirect to="/login" /> : (
-          appointmentMap()
-        )
-      }
+    <div className="Appointments">
+      <h1 className="d-flex justify-content-center mb-3">Your Appointments:</h1>
+      <div className="Appointments_Grid">
+        {
+          !logIn ? <Redirect to="/login" /> : (
+            appointmentMap()
+          )
+        }
+      </div>
     </div>
   );
 };

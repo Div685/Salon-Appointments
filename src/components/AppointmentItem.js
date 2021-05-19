@@ -1,17 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../assets/css/Appointment.css';
 
 const AppointmentItem = ({ items }) => {
   const { date, branch } = items;
+  const branches = () => {
+    if (branch === null) {
+      return 'Main';
+    }
+    return branch;
+  };
+
   return (
-    <div>
-      <figure>
-        <img src={items.item.img} alt="img" />
-        <figcaption>{items.item.name}</figcaption>
-      </figure>
-      <div className="d-flex">
-        <p>{`Date: ${date}`}</p>
-        <p>{`Branch: ${branch}`}</p>
+    <div className="Appointment d-flex p-3">
+      <img src={items.item.img} alt="img" />
+      <div className="d-flex flex-column mx-3">
+        <h3 className="text-uppercase">{items.item.name}</h3>
+        <p className="h5">{`Date: ${date}`}</p>
+        <p className="h5">{`Branch: ${branches()}`}</p>
       </div>
     </div>
   );
