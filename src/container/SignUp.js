@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { signedUp } from '../api/authUserRequest';
 import UserForm from '../components/UserForm';
 import { signUp, logIn } from '../redux/actions';
+import '../assets/css/SignUp.css';
 
 const SignUp = ({
   signUp, logIn, history, loginUser,
@@ -33,11 +34,11 @@ const SignUp = ({
   };
 
   return loginUser ? <Redirect to="/items" /> : (
-    <div>
+    <div className="SignUp">
       {message && message.map((msg) => (<p key={msg}>{msg}</p>))}
       <h2>Sign up</h2>
       <UserForm handleSubmit={handleSubmit} btnName="Sign Up" />
-      <Link to="/login" className="btn">Log in</Link>
+      <Link to="/login" className="btn__login">Log in</Link>
     </div>
   );
 };
