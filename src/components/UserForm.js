@@ -15,7 +15,7 @@ const UserForm = ({ handleSubmit, btnName }) => {
     <div className="form__section">
       <form className="form" onSubmit={onSubmitForm}>
         <input
-          className="form_input"
+          className="form__input"
           placeholder="Username"
           type="text"
           name="username"
@@ -23,7 +23,7 @@ const UserForm = ({ handleSubmit, btnName }) => {
           onChange={(event) => { setUserName(event.target.value); }}
         />
         <input
-          className="form_input"
+          className="form__input"
           placeholder="password"
           type="password"
           name="password"
@@ -31,7 +31,7 @@ const UserForm = ({ handleSubmit, btnName }) => {
           onChange={(event) => { setPassword(event.target.value); }}
         />
 
-        <button type="submit" className="btn ">{btnName}</button>
+        <button type="submit" className="btn__login">{btnName}</button>
       </form>
     </div>
   );
