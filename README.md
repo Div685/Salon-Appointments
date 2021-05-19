@@ -30,7 +30,7 @@ I've implemented the following functionality:
 
 ## Live Demo
 
-[Live Demo Link](https://yoco-tracking-app-front.herokuapp.com/)
+[Live Demo Link](https://salon-appointment-app.herokuapp.com/)
 
 
 ## Getting Started
