@@ -48,19 +48,19 @@ const NavBar = () => {
           </Link>
         </div>
         {isLoggedIn ? (
-          <>
+          <div className="nav__items">
             <span>{`Welcome ${user.user.username}`}</span>
-            <NavLink exact to="/items" onClick={closeToggle}>Items</NavLink>
-            <NavLink exact to="/appointments" onClick={closeToggle}>Appointments</NavLink>
-            <NavLink exact to="/" onClick={closeToggle}>LifeStyle</NavLink>
-            <NavLink exact to="/" onClick={closeToggle}>Shop</NavLink>
+            <NavLink exact to="/items" activeClassName="selected" onClick={closeToggle}>Items</NavLink>
+            <NavLink exact to="/appointments" activeClassName="selected" onClick={closeToggle}>Appointments</NavLink>
+            <NavLink exact to="/" activeClassName="selected" onClick={closeToggle}>LifeStyle</NavLink>
+            <NavLink exact to="/" activeClassName="selected" onClick={closeToggle}>Shop</NavLink>
             <LogOutBtn />
-          </>
+          </div>
         ) : (
-          <>
+          <div className="nav__auth">
             <NavLink exact to="/login" activeClassName="selected" onClick={closeToggle}>Login</NavLink>
             <NavLink exact to="/signup" activeClassName="selected" onClick={closeToggle}>Sing Up</NavLink>
-          </>
+          </div>
         ) }
       </nav>
     </header>

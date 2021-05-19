@@ -92,15 +92,15 @@ nav.nav.active {
     }
     
     .nav span {
-      padding: 12px 0;
+      padding: 12px 16px;
+      font-size: 23px;
     }
     
     .nav a {
-      padding: 12px 0;
+      padding: 12px 16px;
       width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center
+    text-align: justify;
     }
     
     .nav a:hover {
@@ -112,12 +112,29 @@ nav.nav.active {
       display: flex;
       flex-direction: column;
       background: #fff;
-      transform: translateY(200%);
+      /* transform: translateY(200%); */
       justify-content: center;
-      align-items: center;
+      /* align-items: center; */
       transition: all 0.25s;
     }
     
+    .nav__items {
+      transform: translateY(250%);
+    transition: all 0.25s;
+    margin: 0 0 0 20px;
+    text-align: justify;
+    font-size: 23px
+    }
+
+    .nav__auth {
+      transform: translateY(375%);
+    transition: all 0.25s;
+    margin: 0 0 0 20px;
+    text-align: justify;
+    font-size: 32px;
+    font-weight: 500;
+    }
+
     nav.nav.active {
       width: 100%;
       transform: translateY(62%);
@@ -140,6 +157,9 @@ nav.nav.active {
     .logoutButton {
       background: #97BF12;
         color: #fff;
+        width: 100%;
+    text-align: justify;
+    font-size: 22px;
     }
 
     .selected {

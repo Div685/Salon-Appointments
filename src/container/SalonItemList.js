@@ -11,14 +11,14 @@ const SalonItemList = () => {
   }, []);
 
   const heatMap = () => {
-
+    <h1>Loading...</h1>;
   };
 
   return (
     <div className="items">
       <div className="items__header">
         <h1>Our Services</h1>
-        <p>Please select service and Book an appointment with us.</p>
+        <p>Please select a service.</p>
       </div>
       <div className="items__Lists">
         {

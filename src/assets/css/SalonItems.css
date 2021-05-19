@@ -37,20 +37,27 @@
       width: 100%;
     }
 
-    figure {
-      margin: 0;
-      border: 1px solid #aaa;
-    border-radius: 50%;
-    background: #EFEFEF;
-    }
-
     .item {
       margin-right: 12px;
     }
     
+    .item figure {
+      margin: 0 0 1rem;
+    }
+    
     .item figure img {
       margin-right: 10px;
-      max-height: 250px
+      max-height: 250px;
+      border-radius: 50%;
+      box-shadow: 0 8px 16px 1px #ccc;
+      transition: 0.3s;
+    }
+
+    .item figure img:hover {
+      margin-right: 10px;
+      max-height: 250px;
+      border-radius: 50%;
+      box-shadow: 0 16px 30px 1px #ccc;
     }
 
     figcaption {
@@ -59,4 +66,22 @@
     text-transform: capitalize;
     padding: 10px 0;
     }
+
+    .item__socialMedia {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0 0;
+    }
+
+    .MuiSvgIcon-root {
+      color: #989898;
+      font-size: 1.9rem !important;
+      margin: 0 10px 0 0;
+      border: 2px solid #aaa;
+      padding: 11px;
+      border-radius: 50%;
+      height: 1.7em !important;
+      width: 1.7em !important;
+    }
+
   }
