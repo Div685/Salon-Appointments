@@ -5,12 +5,12 @@
 
 .items .items__header {
   display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.item  {
+.item {
   padding: 10px 0;
   margin: 10px 0;
 }
@@ -18,9 +18,9 @@
 .item figure img {
   width: 100%;
   padding: 10px;
-    background-size: cover;
-    background-position: center;
-    max-height: 250px;
+  background-size: cover;
+  background-position: center;
+  max-height: 250px;
 }
 
 .item figcaption {
@@ -28,10 +28,10 @@
   font-size: 24px;
   text-align: center;
   text-transform: uppercase;
-    white-space: nowrap;
-    overflow: hidden;
-   text-overflow: ellipsis;
-   color: #97BF12;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #97bf12;
 }
 
 .item__socialMedia {
@@ -45,111 +45,108 @@
 
 /* Landscape mode Tab */
 
-@media only screen 
-  and (min-device-width: 768px) 
+@media only screen
+  and (min-device-width: 768px)
   and (max-device-width: 1024px) {
-
-    .items {
-      display: flex;
+  .items {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background: #fafafa;
-    }
-
-    .items__header {
-      text-align: center;
-    }
-
-    .items__header h1 {
-      text-transform: uppercase;
-      font-weight: bold;
-      font-size: 50px;
-    }
-
-    .items__header p {
-      font-size: 20px;
-    }
-
-    .items__Lists {
-      display: flex;
-      padding: 20px;
-      overflow-y: hidden;
-      overflow-x: scroll;
-      align-items: center;
-      width: 100%;
-    }
-
-    .item {
-      margin-right: 12px;
-    }
-    
-    .item figure {
-      margin: 0 0 1rem;
-    }
-    
-    .item figure img {
-      margin-right: 10px;
-      height: 250px;
-      max-height: 250px;
-      border-radius: 50%;
-      box-shadow: 0 8px 16px 1px #ccc;
-      transition: 0.3s;
-    }
-
-    .item figure img:hover {
-      margin-right: 10px;
-      max-height: 250px;
-      border-radius: 50%;
-      box-shadow: 0 16px 30px 1px #ccc;
-    }
-
-    figcaption {
-      font-size: 26px;
-      text-align: center;
-      text-transform: capitalize;
-      padding: 10px 0;
-      width: 250px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis
-    }
-
-    .item__socialMedia {
-      display: flex;
-      justify-content: center;
-      margin: 20px 0 0;
-    }
-
-    .MuiSvgIcon-root {
-      color: #989898;
-      font-size: 1.9rem !important;
-      margin: 0 10px 0 0;
-      border: 2px solid #aaa;
-      padding: 11px;
-      border-radius: 50%;
-      height: 1.7em !important;
-      width: 1.7em !important;
-    }
-
   }
 
-  @media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) { 
-
-    .items__Lists {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-gap: 10px;
-    }
-
-    .item figure img {
-      border-radius: 50%;
-    }
-
-    .item figcaption {
-      color: #97BF12;
-    }
+  .items__header {
+    text-align: center;
   }
+
+  .items__header h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 50px;
+  }
+
+  .items__header p {
+    font-size: 20px;
+  }
+
+  .items__Lists {
+    display: flex;
+    padding: 20px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    align-items: center;
+    width: 100%;
+  }
+
+  .item {
+    margin-right: 12px;
+  }
+
+  .item figure {
+    margin: 0 0 1rem;
+  }
+
+  .item figure img {
+    margin-right: 10px;
+    height: 250px;
+    max-height: 250px;
+    border-radius: 50%;
+    box-shadow: 0 8px 16px 1px #ccc;
+    transition: 0.3s;
+  }
+
+  .item figure img:hover {
+    margin-right: 10px;
+    max-height: 250px;
+    border-radius: 50%;
+    box-shadow: 0 16px 30px 1px #ccc;
+  }
+
+  figcaption {
+    font-size: 26px;
+    text-align: center;
+    text-transform: capitalize;
+    padding: 10px 0;
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .item__socialMedia {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 0;
+  }
+
+  .MuiSvgIcon-root {
+    color: #989898;
+    font-size: 1.9rem !important;
+    margin: 0 10px 0 0;
+    border: 2px solid #aaa;
+    padding: 11px;
+    border-radius: 50%;
+    height: 1.7em !important;
+    width: 1.7em !important;
+  }
+}
+
+@media screen
+  and (min-device-width: 1200px)
+  and (max-device-width: 1600px) {
+  .items__Lists {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+
+  .item figure img {
+    border-radius: 50%;
+  }
+
+  .item figcaption {
+    color: #97bf12;
+  }
+}
