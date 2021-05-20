@@ -1,9 +1,12 @@
 import React from 'react';
+import HttpsRedirect from 'react-https-redirect';
 import Routes from './Routes';
 
 const App = () => (
   <div className="App">
-    <Routes />
+    <HttpsRedirect>
+      <Routes />
+    </HttpsRedirect>
   </div>
 );
 
