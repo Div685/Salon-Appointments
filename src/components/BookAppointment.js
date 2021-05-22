@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { branches } from '../redux/actions/actionTypes';
 import '../assets/css/ItemDetails.css';
 
-const BookAppointment = ({ handleSubmit }) => {
+const BookAppointment = ({ handleSubmit, prevDate }) => {
   const [date, setDate] = useState('');
   const [branch, setBranch] = useState('');
 
@@ -21,6 +21,7 @@ const BookAppointment = ({ handleSubmit }) => {
           className="form_control"
           type="datetime-local"
           onChange={(event) => { setDate(event.target.value); }}
+          min={prevDate()}
         />
         <select
           name="filter"
@@ -43,6 +44,7 @@ const BookAppointment = ({ handleSubmit }) => {
 
 BookAppointment.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
+  prevDate: PropTypes.func.isRequired,
 };
 
 export default BookAppointment;

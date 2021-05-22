@@ -43,6 +43,19 @@ const SalonDetails = () => {
     }
   };
 
+  const disablePastDate = () => {
+    let month = new Date().getMonth() + 1;
+    let day = new Date().getDate();
+    const year = new Date().getFullYear();
+    if (month < 10) {
+      month = `0${month}`;
+    }
+    if (day < 10) {
+      day = `0${day}`;
+    }
+    return `${year}-${month}-${day}T00:00`.toString();
+  };
+
   const heatMap = () => (
     <div className="heatmap__details">
       <div className="heatmap__details-up">
@@ -70,7 +83,7 @@ const SalonDetails = () => {
           ? (
             <>
               <ItemDetails item={item} />
-              <BookAppointment handleSubmit={handleSubmit} />
+              <BookAppointment handleSubmit={handleSubmit} prevDate={disablePastDate} />
             </>
           )
           : (heatMap())
