@@ -53,7 +53,7 @@ const NavBar = () => {
         ) : (
           <div className={`nav__auth${toggleNavClass}`}>
             <NavLink exact to="/login" activeClassName="selected" onClick={closeToggle}>Login</NavLink>
-            <NavLink exact to="/signup" activeClassName="selected" onClick={closeToggle}>Sing Up</NavLink>
+            <NavLink exact to="/signup" activeClassName="selected" onClick={closeToggle}>Sign Up</NavLink>
           </div>
         ) }
       </nav>
