@@ -12,6 +12,7 @@ export const REMOVE_SINGLE_ITEM = 'REMOVE_SINGLE_ITEM';
 
 // Appointment
 export const ADD_APPOINTMENTS = 'ADD_APPOINTMENTS';
+export const REMOVE_APPOINTMENTS = 'REMOVE_APPOINTMENTS';
 
 // Appointment items
 export const ADD_APPOINTMENT_ITEMS = 'ADD_APPOINTMENT_ITEMS';

@@ -8,6 +8,7 @@ import {
   REMOVE_SINGLE_ITEM,
   REMOVE_ITEMS,
   REMOVE_APPOINTMENT_ITEMS,
+  REMOVE_APPOINTMENTS,
 } from './actionTypes';
 
 export const logIn = (logIn = true) => ({
@@ -43,7 +44,11 @@ export const addAppointments = (appointments = []) => ({
   appointments,
 });
 
-export const addAppointmentItems = (appointmentItems = []) => ({
+export const removeAppointments = () => ({
+  type: REMOVE_APPOINTMENTS,
+});
+
+export const addAppointmentItems = (appointmentItems = {}) => ({
   type: ADD_APPOINTMENT_ITEMS,
   appointmentItems,
 });

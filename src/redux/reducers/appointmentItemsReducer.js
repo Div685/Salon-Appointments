@@ -1,7 +1,7 @@
 import { ADD_APPOINTMENT_ITEMS, REMOVE_APPOINTMENT_ITEMS } from '../actions/actionTypes';
 
 const defaultAppointments = {
-  appointmentItems: [],
+  appointmentItems: {},
 };
 
 const appointmentItemsReducer = (state = defaultAppointments, action) => {
