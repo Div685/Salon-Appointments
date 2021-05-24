@@ -7,7 +7,7 @@ const exampleItems = [{
 }];
 
 const initialState = {
-  appointmentItems: [],
+  appointmentItems: {},
 };
 
 const itemAction = {
