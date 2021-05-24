@@ -1,15 +1,34 @@
-import React, { useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect, useState } from 'react';
+import { connect, useSelector } from 'react-redux';
 import { Redirect } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { fetchUserAppointments } from '../api/fetchItems';
 import AppointmentItem from '../components/AppointmentItem';
+import { addAppointmentItems } from '../redux/actions';
 
-const AppointmentLists = () => {
-  const appointments = useSelector((state) => state.appointmentItems.appointmentItems);
-  const logIn = useSelector((state) => state.user.logIn);
+const AppointmentLists = ({ appointments, addAppointmentItems }) => {
+  const logInUser = useSelector((state) => state.user.logIn);
+
+  const [error, setError] = useState('');
+
+  const fetchAppointmentsUser = async () => {
+    try {
+      const response = await fetchUserAppointments();
+      if (response.appointmentItems.length > 0) {
+        setError('');
+        addAppointmentItems(response.appointmentItems);
+      } else {
+        setError('No Appointment Found');
+      }
+    } catch {
+      setError('Unable to fetch User Appointments');
+    }
+  };
 
   useEffect(() => {
-    fetchUserAppointments();
+    if (logInUser) {
+      fetchAppointmentsUser();
+    }
   }, []);
 
   const heatMap = () => (
@@ -40,30 +59,52 @@ const AppointmentLists = () => {
     </>
   );
 
+  // eslint-disable-next-line no-unused-vars
   const appointmentMap = () => (
     <>
       {
-       appointments && appointments.length
-         ? appointments.map((item) => (
-           <AppointmentItem key={item.id} items={item} />
-         ))
-         : (heatMap())
+        appointments && appointments.length
+          ? appointments.map((item) => (
+            <AppointmentItem key={item.id} items={item} />
+          ))
+          : (heatMap())
       }
     </>
   );
 
-  return (
+  return logInUser ? (
     <div className="Appointments">
+      {error && <p className="error-msg">{error}</p>}
       <h1 className="d-flex justify-content-center mb-3">Your Appointments:</h1>
       <div className="Appointments_Grid">
         {
-          !logIn ? <Redirect to="/login" /> : (
-            appointmentMap()
-          )
+           appointments
+             ? appointments.length > 0 && appointments.map((item) => (
+               <AppointmentItem key={item.id} items={item} />
+             ))
+             : (heatMap())
         }
       </div>
     </div>
-  );
+  ) : <Redirect to="/login" />;
 };
 
-export default AppointmentLists;
+const mapStateToProps = (state) => ({
+  appointments: state.appointmentItems.appointmentItems,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  addAppointmentItems: (items) => dispatch(addAppointmentItems(items)),
+});
+
+AppointmentLists.propTypes = {
+  appointments: PropTypes.instanceOf(Object),
+  addAppointmentItems: PropTypes.func,
+};
+
+AppointmentLists.defaultProps = {
+  appointments: {},
+  addAppointmentItems: null,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(AppointmentLists);
