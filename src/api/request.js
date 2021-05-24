@@ -1,9 +1,7 @@
 import axios from 'axios';
 import apiUrl from './apiUrl';
 
-const token = localStorage.getItem('token');
-
-const authAxios = axios.create({
+const authAxios = (token = null) => axios.create({
   baseURL: apiUrl,
   data: {},
   headers: {
