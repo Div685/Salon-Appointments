@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import cookie from 'react-cookies';
 import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { signedUp } from '../api/authUserRequest';
@@ -10,14 +11,15 @@ import '../assets/css/SignUp.css';
 const SignUp = ({
   signUp, logIn, history, loginUser,
 }) => {
-  const [message, setMessage] = useState([]);
+  const [message, setMessage] = useState('');
 
   const handleSignUp = async (userName, password) => {
     try {
       const response = await signedUp(userName, password);
       if (response.status === 'created') {
-        setMessage(['SuccessFully Created User!']);
-        localStorage.setItem('token', response.token);
+        setMessage('SuccessFully Created User!');
+        // localStorage.setItem('token', response.token);
+        cookie.save('token', response.token);
         signUp(response.user);
         logIn(true);
         history.push('/items');
@@ -25,7 +27,7 @@ const SignUp = ({
         setMessage(response.message);
       }
     } catch {
-      setMessage(['Sorry, Signup failed ']);
+      setMessage('Sorry, Signup failed ');
     }
   };
 
@@ -35,7 +37,7 @@ const SignUp = ({
 
   return loginUser ? <Redirect to="/items" /> : (
     <div className="SignUp">
-      {message && message.map((msg) => (<p key={msg}>{msg}</p>))}
+      {message && <p className="error-msg d-flex p-3 justify-content-center bg-danger text-white">{message}</p>}
       <h2>Sign up</h2>
       <UserForm handleSubmit={handleSubmit} btnName="Sign Up" />
       <Link to="/login" className="btn__login">Log in</Link>

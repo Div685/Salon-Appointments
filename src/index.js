@@ -4,6 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import decode from 'jwt-decode';
+import cookie from 'react-cookies';
 import { logIn, signUp } from './redux/actions';
 import { redirectToHome } from './api/authUserRequest';
 import App from './components/App';
@@ -28,16 +29,18 @@ const redirectLogin = async (userId) => {
   } else {
     store.dispatch(logIn(false));
     store.dispatch(signUp({}));
-    localStorage.clear();
+    // localStorage.clear();
+    cookie.remove('token');
   }
 };
 
-if (localStorage.token) {
-  const decodedToken = decode(localStorage.token);
+if (cookie.load('token')) {
+  const decodedToken = decode(cookie.load('token'));
   if (Date.now() >= decodedToken.exp * 1000) {
     store.dispatch(logIn(false));
     store.dispatch(signUp({}));
-    localStorage.clear();
+    // localStorage.clear();
+    cookie.remove('token');
   }
   redirectLogin(decodedToken.user_id);
 } else {
