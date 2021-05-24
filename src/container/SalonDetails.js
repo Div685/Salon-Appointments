@@ -1,30 +1,34 @@
 import React, { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
-import { useHistory, useParams } from 'react-router-dom';
+import { connect, useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
 import decode from 'jwt-decode';
+import cookie from 'react-cookies';
+import PropTypes from 'prop-types';
 import { fetchItemDetail } from '../api/fetchItems';
 import ItemDetails from '../components/ItemDetails';
 import { bookAppointment } from '../api/authUserRequest';
 import BookAppointment from '../components/BookAppointment';
 import { addAppointments } from '../redux/actions';
 
-const SalonDetails = () => {
+const SalonDetails = ({ addAppointments, history }) => {
   const item = useSelector((state) => state.item.item);
-  const history = useHistory();
   const { id } = useParams();
   const [message, setMessage] = useState('');
+  const [isMounted, setIsMounted] = useState(true);
 
   useEffect(() => {
     fetchItemDetail(id);
+    return () => {
+      setIsMounted(false);
+    };
   }, []);
 
   const handleBookAppointment = async (date, userId, branch) => {
     try {
       const response = await bookAppointment(date, id, userId, branch);
-      if (response.status === 'Created') {
+      if (isMounted && response.status === 'created') {
         setMessage('Successfully Booked your Appointment');
-        addAppointments(response);
-        history.push('/appointments');
+        addAppointments(response.appointments);
       } else {
         setMessage(response.message);
       }
@@ -34,10 +38,11 @@ const SalonDetails = () => {
   };
 
   const handleSubmit = (date, branch) => {
-    if (localStorage.token) {
-      const decodedToken = decode(localStorage.token);
+    if (cookie.load('token')) {
+      const decodedToken = decode(cookie.load('token'));
       const { userId } = decodedToken;
       handleBookAppointment(date, userId, branch);
+      history.push('/appointments');
     } else {
       setMessage('Please Login to Book an Appointment');
     }
@@ -92,4 +97,18 @@ const SalonDetails = () => {
   );
 };
 
-export default SalonDetails;
+const mapDispatchToProps = (dispatch) => ({
+  addAppointments: (appointment) => dispatch(addAppointments(appointment)),
+});
+
+SalonDetails.propTypes = {
+  history: PropTypes.instanceOf(Object),
+  addAppointments: PropTypes.func,
+};
+
+SalonDetails.defaultProps = {
+  history: null,
+  addAppointments: null,
+};
+
+export default connect(null, mapDispatchToProps)(SalonDetails);

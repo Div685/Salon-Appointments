@@ -20,7 +20,7 @@ const Routes = () => (
         <Route exact path="/login" render={(props) => (<Login history={props.history} />)} />
         <Route exact path="/signup" render={(props) => (<SignUp history={props.history} />)} />
         <Route exact path="/items" component={SalonItemList} />
-        <Route exact path="/items/:id" component={SalonDetails} />
+        <Route exact path="/items/:id" render={(props) => (<SalonDetails history={props.history} />)} />
         <Route exact path="/appointments" component={AppointmentLists} />
       </Switch>
     </div>
