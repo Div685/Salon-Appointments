@@ -7,7 +7,6 @@ import '../assets/css/NavBar.css';
 
 const LogOutBtn = ({ logIn, signUp }) => {
   const handleLogout = () => {
-    // localStorage.removeItem('token');
     cookie.remove('token');
     logIn(false);
     signUp({});

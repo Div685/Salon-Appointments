@@ -18,7 +18,6 @@ const Login = ({
       const response = await loggedIn(userName, password);
       if (response.logged_in) {
         setMessage(['SuccessFully Logged in!']);
-        // localStorage.setItem('token', response.token);
         cookie.save('token', response.token);
         signUp(response.user);
         logIn(true);

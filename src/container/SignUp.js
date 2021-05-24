@@ -18,7 +18,6 @@ const SignUp = ({
       const response = await signedUp(userName, password);
       if (response.status === 'created') {
         setMessage('SuccessFully Created User!');
-        // localStorage.setItem('token', response.token);
         cookie.save('token', response.token);
         signUp(response.user);
         logIn(true);

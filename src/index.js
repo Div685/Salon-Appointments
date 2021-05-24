@@ -29,7 +29,6 @@ const redirectLogin = async (userId) => {
   } else {
     store.dispatch(logIn(false));
     store.dispatch(signUp({}));
-    // localStorage.clear();
     cookie.remove('token');
   }
 };
@@ -39,7 +38,6 @@ if (cookie.load('token')) {
   if (Date.now() >= decodedToken.exp * 1000) {
     store.dispatch(logIn(false));
     store.dispatch(signUp({}));
-    // localStorage.clear();
     cookie.remove('token');
   }
   redirectLogin(decodedToken.user_id);

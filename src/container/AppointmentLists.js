@@ -59,27 +59,14 @@ const AppointmentLists = ({ appointments, addAppointmentItems }) => {
     </>
   );
 
-  // eslint-disable-next-line no-unused-vars
-  const appointmentMap = () => (
-    <>
-      {
-        appointments && appointments.length
-          ? appointments.map((item) => (
-            <AppointmentItem key={item.id} items={item} />
-          ))
-          : (heatMap())
-      }
-    </>
-  );
-
   return logInUser ? (
     <div className="Appointments">
-      {error && <p className="error-msg">{error}</p>}
+      {error && <p className="error-msg d-flex p-3 justify-content-center bg-danger text-white">{error}</p>}
       <h1 className="d-flex justify-content-center mb-3">Your Appointments:</h1>
       <div className="Appointments_Grid">
         {
-           appointments
-             ? appointments.length > 0 && appointments.map((item) => (
+           appointments && appointments.length > 0
+             ? appointments.map((item) => (
                <AppointmentItem key={item.id} items={item} />
              ))
              : (heatMap())
