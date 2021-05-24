@@ -109,6 +109,7 @@ a {
     font-size: 33px;
     font-weight: 900;
     text-shadow: 2px 10px 5px #bcf500;
+    padding: 0 16px;
   }
 
   a {
@@ -212,6 +213,7 @@ a {
     font-size: 26px;
     font-weight: 900;
     text-shadow: 2px 10px 5px #bcf500;
+    padding: 0 12px;
   }
 
   a {
