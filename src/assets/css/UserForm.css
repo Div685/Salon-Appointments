@@ -1,0 +1,71 @@
+.form__section {
+  width: 90%;
+}
+
+.form__section .form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__section .form .form__input {
+  padding: 10px;
+  margin: 10px 0;
+  box-shadow: 4px 7px 8px 5px #555;
+  border: none;
+  font-size: 30px;
+  border-radius: 10px;
+}
+
+.form__section .form .btn__login {
+  background: #97bf12;
+  color: #fff;
+  margin: 10px 0;
+  font-size: 30px;
+  font-weight: 900;
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+  width: 100%;
+}
+
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px) {
+  .form__section {
+    width: 70%;
+  }
+
+  .form__section .form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form__section .form .form__input {
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow: 4px 7px 8px 5px #555;
+    border: none;
+    font-size: 30px;
+    border-radius: 10px;
+  }
+
+  .form__section .form .btn__login {
+    background: #97bf12;
+    color: #fff;
+    margin: 10px 0;
+    font-size: 30px;
+    font-weight: 900;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    width: 100%;
+  }
+}
+
+@media screen
+  and (min-device-width: 1200px)
+  and (max-device-width: 1600px) {
+  .form__section {
+    width: 40%;
+  }
+}
