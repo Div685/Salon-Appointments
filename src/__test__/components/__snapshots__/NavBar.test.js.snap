@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBar Component renders NavBar page correctly 1`] = `
+<header
+  className="header"
+>
+  <div
+    className="nav__logo"
+  >
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      <h3>
+        BookMySalon
+      </h3>
+    </a>
+  </div>
+  <div
+    className="nav__toggle"
+  >
+    <button
+      className="header_button"
+      onClick={[Function]}
+      type="button"
+    >
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+        />
+      </svg>
+    </button>
+  </div>
+  <nav
+    className="nav"
+  >
+    <div
+      className="nav__items"
+    >
+      <span>
+        Welcome undefined
+      </span>
+      <a
+        aria-current={null}
+        href="/items"
+        onClick={[Function]}
+      >
+        Items
+      </a>
+      <a
+        aria-current={null}
+        href="/appointments"
+        onClick={[Function]}
+      >
+        Appointments
+      </a>
+      <a
+        aria-current="page"
+        className="selected"
+        href="/"
+        onClick={[Function]}
+        style={Object {}}
+      >
+        LifeStyle
+      </a>
+      <button
+        className="btn logoutButton"
+        onClick={[Function]}
+        type="button"
+      >
+        Logout
+      </button>
+    </div>
+  </nav>
+</header>
+`;

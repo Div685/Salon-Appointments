@@ -1,0 +1,55 @@
+.Appointments {
+  padding: 0.5rem;
+}
+
+.Appointment img {
+  max-height: 150px;
+  width: 60%;
+  background-position: center;
+  background-size: cover;
+}
+
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px) {
+  .Appointments {
+    padding: 1rem;
+  }
+
+  .Appointment {
+    display: flex;
+    flex-direction: row !important;
+  }
+
+  .Appointment img {
+    max-height: 150px;
+    width: 60%;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+/* Laptops */
+
+@media screen
+  and (min-device-width: 1200px)
+  and (max-device-width: 1600px) {
+  .Appointments {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Appointment img {
+    max-height: 150px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .Appointments_Grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+}
