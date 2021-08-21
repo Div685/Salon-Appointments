@@ -1,0 +1,19 @@
+.Appointments {
+  padding: 0.5rem;
+
+  h1, h3 {
+    color: $color_acent_green;
+    font-weight: 900;
+  }
+
+  .Appointment {
+    img {
+      max-height: 150px;
+      max-width: 165px;
+      width: 100%;
+      background-position: center;
+      background-size: cover;
+      border-radius: 16px;
+    }
+  }
+}

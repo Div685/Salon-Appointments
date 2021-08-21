@@ -1,0 +1,57 @@
+.items {
+  background: $color_white;
+  padding: 20px 0;
+
+  .items__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .items__Lists {
+    .item {
+      padding: 10px 0;
+      margin: 10px 0;
+
+      a {
+        text-decoration: none;
+      }
+
+      figure {
+        margin: 0;
+      }
+
+      img {
+        width: 100%;
+        padding: 10px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 24px;
+        max-height: 250px;
+        transition: 0.3s;
+      }
+
+      figcaption {
+        font-weight: 500;
+        font-size: 24px;
+        text-align: center;
+        text-transform: uppercase;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: $color_primary_green;
+      }
+
+      .item__socialMedia {
+        display: flex;
+        justify-content: center;
+        
+        .MuiSvgIcon-root {
+          margin: 0 10px 0 0;
+        }
+      }
+      
+    }
+  }
+}

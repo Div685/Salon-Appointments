@@ -1,0 +1,61 @@
+.itemDetails {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px;
+
+  img {
+    width: 100%;
+    max-height: 200px;
+  }
+
+  .item__details {
+
+    .item__title {
+      font-size: 26px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .item__price {
+
+      p {
+        &:nth-child(odd) {
+          background-color: $color_gray;
+          padding: 10px;
+        }
+      }
+    }
+  }
+
+}
+
+.bookAppointment {
+  text-align: center;
+
+  span {
+    padding: 10px;
+  }
+
+  .appointmentForm {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+    input, select, button {
+      border-radius: 10px;
+      padding: 10px;
+    }
+
+    select {
+      margin: 10px 0;
+    }
+
+    button {
+      border: none;
+      background: $color_primary_green;
+      color: $color_white;
+      font-size: 20px;
+    }
+  }
+}
