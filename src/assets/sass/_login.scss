@@ -9,10 +9,6 @@
   object-fit: contain;
   font-weight: 900;
 
-  @include breakpoint(tablet) {
-
-  }
-
   a {
     text-decoration: none;
   }

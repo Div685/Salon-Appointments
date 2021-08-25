@@ -31,11 +31,9 @@
       border-radius: 50%;
       max-width: 400px;
     }
-
   }
 
   .item__details {
-
     @include breakpoint(tablet) {
       align-items: center;
       width: 100%;
@@ -94,7 +92,7 @@
 .bookAppointment {
   text-align: center;
 
-  @include breakpoint(tablet){
+  @include breakpoint(tablet) {
     padding: 0.7rem 3rem;
   }
 
@@ -107,7 +105,7 @@
       font-size: 40px;
       font-weight: 700;
       text-transform: uppercase;
-    }    
+    }
   }
 
   span {

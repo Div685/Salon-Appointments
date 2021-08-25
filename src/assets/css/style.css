@@ -1,3 +1,4 @@
+/* stylelint-disable */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .Routes__Nav {
     background-color: #f7f7f7;
@@ -204,7 +205,7 @@
       background: #fff;
       height: 105vh;
       padding: 25px 0;
-      box-shadow: 3px 0px #d3d3d3; } }
+      box-shadow: 3px 0 #d3d3d3; } }
   @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
     .header {
       height: 107vh; } }
@@ -354,7 +355,7 @@
           margin-right: 10px;
           height: 250px;
           max-height: 200px;
-          box-shadow: 0 0px 3px 0px #ccc;
+          box-shadow: 0 0 3px 0 #ccc;
           transition: 0.3s; } }
     .items .items__Lists .item figcaption {
       font-weight: 500;

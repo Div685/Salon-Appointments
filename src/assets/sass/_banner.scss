@@ -14,12 +14,12 @@
   @include breakpoint(tablet_portrait) {
     height: 100vh;
   }
-  
+
   .banner__contents {
     margin-left: 30px;
     padding-top: 140px;
     height: 306px;
-    
+
     .banner__title {
       font-size: 3rem;
       font-weight: 800;
@@ -41,6 +41,7 @@
       }
     }
   }
+
   .banner__fadeBottom {
     height: 7.5rem;
     background-image:
@@ -51,15 +52,12 @@
         #1a1a29
       );
 
-      @include breakpoint(tablet) {
-        height: 28.9rem;
-      }
+    @include breakpoint(tablet) {
+      height: 28.9rem;
+    }
 
-      @include breakpoint(tablet_portrait) {
-        height: 45rem;
-      }
-
+    @include breakpoint(tablet_portrait) {
+      height: 45rem;
+    }
   }
 }
-
-

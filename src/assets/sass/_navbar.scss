@@ -131,18 +131,16 @@
       }
 
       @include breakpoint(tablet) {
-        transform:  translateY(375%);
+        transform: translateY(375%);
         font-size: 32px;
         font-weight: 500;
       }
 
       @include breakpoint(tablet_portrait) {
-        transform:  translateY(485%);
+        transform: translateY(485%);
         font-size: 32px;
         font-weight: 500;
       }
-
-      
     }
 
     .nav__items {
@@ -175,7 +173,7 @@
   .logoutButton {
     background: #97bf12;
     color: #fff;
-    
+
     @include breakpoint(tablet) {
       background: #97bf12;
       color: #fff;
@@ -193,13 +191,12 @@
     }
   }
 
-
   // Landscape Tab view
   @include breakpoint(tablet) {
     background: #fff;
     height: 105vh;
     padding: 25px 0;
-    box-shadow: 3px 0px #d3d3d3;
+    box-shadow: 3px 0 #d3d3d3;
   }
 
   // Potrait Tab view

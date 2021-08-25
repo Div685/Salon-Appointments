@@ -8,7 +8,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: #1a1a27
+    background: #1a1a27;
   }
 
   @include breakpoint(desktop) {
@@ -28,6 +28,7 @@
 
     h1 {
       color: $color_primary_green;
+
       @include breakpoint(tablet) {
         text-transform: uppercase;
         font-weight: bold;
@@ -41,7 +42,6 @@
   }
 
   .items__Lists {
-
     @include breakpoint(tablet) {
       display: flex;
       padding: 20px;
@@ -103,7 +103,7 @@
           margin-right: 10px;
           height: 250px;
           max-height: 200px;
-          box-shadow: 0 0px 3px 0px #ccc;
+          box-shadow: 0 0 3px 0 #ccc;
           transition: 0.3s;
         }
       }
@@ -192,6 +192,4 @@
       margin: 10px 10px;
     }
   }
-
-
 }
