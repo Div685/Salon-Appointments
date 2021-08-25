@@ -1,6 +1,14 @@
 .form__section {
   width: 90%;
 
+  @include breakpoint(tablet) {
+    width: 70%;
+  }
+
+  @include breakpoint(desktop){
+    width: 40%;
+  }
+
   .form {
     display: flex;
     flex-direction: column;

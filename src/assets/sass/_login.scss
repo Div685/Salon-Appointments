@@ -9,6 +9,10 @@
   object-fit: contain;
   font-weight: 900;
 
+  @include breakpoint(tablet) {
+
+  }
+
   a {
     text-decoration: none;
   }
@@ -16,6 +20,10 @@
   h2 {
     color: $color_white;
     font-size: 50px;
+
+    @include breakpoint(tablet) {
+      font-weight: 900;
+    }
   }
 
   .btn__signup {
@@ -26,5 +34,14 @@
     border-radius: 10px;
     padding: 10px;
     text-align: center;
+
+    @include breakpoint(tablet) {
+      width: 70%;
+      font-weight: 900;
+    }
+
+    @include breakpoint(desktop) {
+      width: 40%;
+    }
   }
 }
