@@ -7,7 +7,7 @@ import SignUp from '../container/SignUp';
 import NavBar from './NavBar';
 import SalonDetails from '../container/SalonDetails';
 import AppointmentLists from '../container/AppointmentLists';
-import '../assets/css/Routes.css';
+// import '../assets/css/Routes.css';
 
 const Routes = () => (
   <BrowserRouter>
