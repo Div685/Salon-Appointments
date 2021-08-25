@@ -6,7 +6,6 @@ import { connect } from 'react-redux';
 import { signedUp } from '../api/authUserRequest';
 import UserForm from '../components/UserForm';
 import { signUp, logIn } from '../redux/actions';
-// import '../assets/css/SignUp.css';
 
 const SignUp = ({
   signUp, logIn, history, loginUser,

@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux';
 import { fetchItemList } from '../api/fetchItems';
 import Banner from '../components/Banner';
 import Item from '../components/Item';
-// import '../assets/css/SalonItems.css';
 
 const SalonItemList = () => {
   const items = useSelector((state) => state.items.items);

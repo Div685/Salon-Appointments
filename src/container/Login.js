@@ -6,7 +6,6 @@ import { Link, Redirect } from 'react-router-dom';
 import { loggedIn } from '../api/authUserRequest';
 import UserForm from '../components/UserForm';
 import { logIn, signUp } from '../redux/actions';
-// import '../assets/css/LogIn.css';
 
 const Login = ({
   logIn, signUp, history, loginUser,

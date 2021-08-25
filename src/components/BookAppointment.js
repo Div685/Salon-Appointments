@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { branches } from '../redux/actions/actionTypes';
-// import '../assets/css/ItemDetails.css';
 
 const BookAppointment = ({ handleSubmit, prevDate }) => {
   const [date, setDate] = useState('');
