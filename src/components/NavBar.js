@@ -4,7 +4,6 @@ import MenuIcon from '@material-ui/icons/Menu';
 import CancelIcon from '@material-ui/icons/Cancel';
 import { useSelector } from 'react-redux';
 import LogOutBtn from './LogOutBtn';
-import '../assets/css/NavBar.css';
 
 const NavBar = () => {
   const [toggleNavClass, setToggleNavClass] = useState('');

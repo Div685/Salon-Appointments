@@ -6,7 +6,6 @@ import { Link, Redirect } from 'react-router-dom';
 import { loggedIn } from '../api/authUserRequest';
 import UserForm from '../components/UserForm';
 import { logIn, signUp } from '../redux/actions';
-import '../assets/css/LogIn.css';
 
 const Login = ({
   logIn, signUp, history, loginUser,
@@ -38,7 +37,7 @@ const Login = ({
     <div className="LogIn">
       {message && <p className="error-msg d-flex p-3 justify-content-center bg-danger text-white">{message}</p>}
       <h2>Login</h2>
-      <UserForm handleSubmit={handleSubmit} btnName="LogIn" />
+      <UserForm handleSubmit={handleSubmit} btnName="Log in" />
       <Link to="/signup" className="btn__signup">Sign up</Link>
     </div>
   );

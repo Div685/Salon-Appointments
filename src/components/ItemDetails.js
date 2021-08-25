@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../assets/css/ItemDetails.css';
 
 const ItemDetails = ({ item }) => {
   const { name, description, img } = item;

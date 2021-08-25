@@ -1,0 +1,60 @@
+.Appointments {
+  padding: 0.5rem;
+
+  @include breakpoint(tablet) {
+    padding: 1rem;
+  }
+
+  @include breakpoint(desktop) {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Appointments_Grid {
+    @include breakpoint(desktop) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+      padding: 5rem;
+    }
+
+    h1,
+    h3 {
+      color: $color_acent_green;
+      font-weight: 900;
+    }
+
+    .Appointment {
+      @include breakpoint(tablet) {
+        display: flex;
+        flex-direction: row !important;
+      }
+
+      img {
+        max-height: 150px;
+        max-width: 165px;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        border-radius: 16px;
+
+        @include breakpoint(tablet) {
+          max-height: 150px;
+          width: 60%;
+          background-position: center;
+          background-size: cover;
+          max-width: 300px;
+        }
+
+        @include breakpoint(desktop) {
+          max-height: 185px;
+          width: 100%;
+          background-position: center;
+          background-size: cover;
+          max-width: 500px;
+        }
+      }
+    }
+  }
+}

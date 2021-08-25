@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../assets/css/Appointment.css';
 
 const AppointmentItem = ({ items }) => {
   const { date, branch } = items;
@@ -12,7 +11,7 @@ const AppointmentItem = ({ items }) => {
   };
 
   return (
-    <div className="Appointment d-flex flex-lg-column p-3">
+    <div className="Appointment d-flex flex-lg-column p-2">
       <img src={items.item.img} alt="img" />
       <div className="d-flex flex-column mx-3">
         <h3 className="text-uppercase">{items.item.name}</h3>

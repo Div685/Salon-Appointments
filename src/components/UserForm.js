@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import '../assets/css/UserForm.css';
 
 const UserForm = ({ handleSubmit, btnName }) => {
   const [userName, setUserName] = useState('');

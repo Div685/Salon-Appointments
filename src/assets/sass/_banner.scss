@@ -1,0 +1,63 @@
+.banner {
+  color: white;
+  object-fit: contain;
+  height: 424px;
+  background-size: cover;
+  background-image: url("https://wallpaperaccess.com/full/2090218.jpg");
+  background-position: right;
+
+  @include breakpoint(tablet) {
+    height: 768px;
+    background-size: cover;
+  }
+
+  @include breakpoint(tablet_portrait) {
+    height: 100vh;
+  }
+
+  .banner__contents {
+    margin-left: 30px;
+    padding-top: 140px;
+    height: 306px;
+
+    .banner__title {
+      font-size: 3rem;
+      font-weight: 800;
+      padding-bottom: 0.3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @include breakpoint(tablet) {
+        height: 400px;
+      }
+
+      @include breakpoint(tablet_portrait) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 70vh;
+        text-align: center;
+      }
+    }
+  }
+
+  .banner__fadeBottom {
+    height: 7.5rem;
+    background-image:
+      linear-gradient(
+        180deg,
+        transparent,
+        rgba(37, 37, 37, 0.61),
+        #1a1a29
+      );
+
+    @include breakpoint(tablet) {
+      height: 28.9rem;
+    }
+
+    @include breakpoint(tablet_portrait) {
+      height: 45rem;
+    }
+  }
+}

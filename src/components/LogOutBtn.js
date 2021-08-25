@@ -3,7 +3,6 @@ import cookie from 'react-cookies';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { logIn, signUp } from '../redux/actions';
-import '../assets/css/NavBar.css';
 
 const LogOutBtn = ({ logIn, signUp }) => {
   const handleLogout = () => {

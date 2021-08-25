@@ -1,0 +1,206 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  text-align: center;
+
+  a {
+    text-decoration: none;
+    color: $color_black;
+  }
+
+  .nav__logo,
+  h3 {
+    color: $color_acent_green;
+    text-shadow: 2px 10px 5px $color_light_green;
+    font-weight: 900;
+    font-size: 26px;
+
+    // Landscape Tab view
+    @include breakpoint(tablet) {
+      padding: 0 12px;
+      font-size: 33px;
+    }
+
+    @include breakpoint(tablet_portrait) {
+      font-size: 26px;
+      padding: 0 6px;
+    }
+  }
+
+  .nav__toggle {
+    cursor: pointer;
+
+    button {
+      border: none;
+      background: transparent;
+
+      @include breakpoint(tablet) {
+        border: none;
+        background: transparent;
+      }
+    }
+
+    // Landscap Tab View
+    @include breakpoint(tablet) {
+      cursor: pointer;
+      display: none;
+    }
+  }
+
+  .nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 1px 5px $color_black;
+    position: absolute;
+    background: $color_white;
+    left: 0;
+    z-index: 99;
+    transform: translateY(-200%);
+    transition: all 0.25s;
+
+    @include breakpoint(tablet) {
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      justify-content: center;
+      transition: all 0.25s;
+    }
+
+    @include breakpoint(tablet_portrait) {
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      justify-content: center;
+      transition: all 0.25s;
+    }
+
+    span,
+    a {
+      padding: 12px 0;
+
+      @include breakpoint(tablet) {
+        padding: 12px 16px;
+        // font-size: 23px;
+      }
+    }
+
+    a {
+      &:hover {
+        background: $color_primary_green;
+        color: $color_white;
+      }
+
+      @include breakpoint(tablet) {
+        width: 100%;
+        display: flex;
+        text-align: justify;
+      }
+
+      @include breakpoint(tablet_portrait) {
+        width: 100%;
+        display: flex;
+        text-align: justify;
+        padding: 12px 16px;
+      }
+    }
+
+    .nav__auth,
+    .nav__items {
+      display: flex;
+      flex-direction: column;
+
+      &.active {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background: $color_white;
+      }
+
+      @include breakpoint(tablet) {
+        transition: all 0.25s;
+        margin: 0 0 0 20px;
+        text-align: justify;
+      }
+    }
+
+    .nav__auth {
+      &.active {
+        transform: translateY(232%);
+      }
+
+      @include breakpoint(tablet) {
+        transform: translateY(375%);
+        font-size: 32px;
+        font-weight: 500;
+      }
+
+      @include breakpoint(tablet_portrait) {
+        transform: translateY(485%);
+        font-size: 32px;
+        font-weight: 500;
+      }
+    }
+
+    .nav__items {
+      &.active {
+        transform: translateY(221%);
+      }
+
+      @include breakpoint(tablet) {
+        transform: translateY(250%);
+        font-size: 23px;
+      }
+
+      @include breakpoint(tablet_portrait) {
+        transform: translateY(300%);
+        font-size: 22px;
+      }
+    }
+  }
+
+  .nav__logo-tab {
+    @include breakpoint(tablet) {
+      display: none;
+    }
+
+    @include breakpoint(tablet_portrait) {
+      display: none;
+    }
+  }
+
+  .logoutButton {
+    background: #97bf12;
+    color: #fff;
+
+    @include breakpoint(tablet) {
+      background: #97bf12;
+      color: #fff;
+      width: 100%;
+      text-align: justify;
+      font-size: 22px;
+    }
+  }
+
+  .selected {
+    @include breakpoint(tablet) {
+      background: #97bf12;
+      color: #fff;
+      font-weight: bold;
+    }
+  }
+
+  // Landscape Tab view
+  @include breakpoint(tablet) {
+    background: #fff;
+    height: 105vh;
+    padding: 25px 0;
+    box-shadow: 3px 0 #d3d3d3;
+  }
+
+  // Potrait Tab view
+  @include breakpoint(tablet_portrait) {
+    height: 107vh;
+  }
+}

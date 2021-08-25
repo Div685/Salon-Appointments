@@ -1,0 +1,195 @@
+.items {
+  background: #1a1a27;
+  padding: 20px 0;
+
+  @include breakpoint(tablet) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #1a1a27;
+  }
+
+  @include breakpoint(desktop) {
+    background: #1a1a27;
+    padding: 0 3rem;
+  }
+
+  .items__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include breakpoint(tablet) {
+      text-align: center;
+    }
+
+    h1 {
+      color: $color_primary_green;
+
+      @include breakpoint(tablet) {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 50px;
+      }
+    }
+
+    p {
+      color: $color_acent_green;
+    }
+  }
+
+  .items__Lists {
+    @include breakpoint(tablet) {
+      display: flex;
+      padding: 20px;
+      overflow-y: hidden;
+      overflow-x: scroll;
+      align-items: center;
+      width: 100%;
+    }
+
+    @include breakpoint(desktop) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .item {
+      padding: 10px 0;
+      margin: 10px 0;
+
+      @include breakpoint(tablet) {
+        margin: 0 30px;
+      }
+
+      @include breakpoint(desktop) {
+        margin: 0 10px;
+        flex: 1 0 20%;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      figure {
+        margin: 0;
+
+        @include breakpoint(tablet) {
+          margin: 0 0 1rem;
+        }
+      }
+
+      img {
+        width: 100%;
+        padding: 10px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 24px;
+        max-height: 250px;
+        transition: 0.3s;
+
+        @include breakpoint(tablet) {
+          margin-right: 10px;
+          height: 250px;
+          max-height: 250px;
+          border-radius: 50%;
+          box-shadow: 0 8px 16px 1px #ccc;
+          transition: 0.3s;
+        }
+
+        @include breakpoint(desktop) {
+          margin-right: 10px;
+          height: 250px;
+          max-height: 200px;
+          box-shadow: 0 0 3px 0 #ccc;
+          transition: 0.3s;
+        }
+      }
+
+      figcaption {
+        font-weight: 500;
+        font-size: 24px;
+        text-align: center;
+        text-transform: uppercase;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: $color_primary_green;
+
+        @include breakpoint(tablet) {
+          font-size: 26px;
+          text-align: center;
+          text-transform: capitalize;
+          padding: 10px 0;
+          width: 250px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+
+      .item__socialMedia {
+        display: flex;
+        justify-content: center;
+
+        @include breakpoint(tablet) {
+          display: flex;
+          justify-content: center;
+          margin: 20px 0 0;
+        }
+
+        .MuiSvgIcon-root {
+          margin: 0 10px 0 0;
+          color: #989898;
+
+          &:hover {
+            color: $color_primary_green;
+          }
+
+          @include breakpoint(tablet) {
+            color: #989898;
+            font-size: 1.9rem !important;
+            margin: 0 10px 0 0;
+            border: 2px solid #aaa;
+            padding: 11px;
+            border-radius: 50%;
+            height: 1.7em !important;
+            width: 1.7em !important;
+          }
+
+          @include breakpoint(desktop) {
+            color: #989898;
+          }
+        }
+      }
+    }
+  }
+}
+
+.heatmap__items {
+  @include breakpoint(tablet) {
+    height: 250px;
+    margin: 20px 0;
+    width: 250px;
+  }
+
+  .heatmap__image {
+    @include breakpoint(tablet) {
+      margin-right: 10px;
+      height: 200px;
+      border-radius: 50%;
+      background: #e3e3e3;
+    }
+  }
+
+  .heatmap__title {
+    @include breakpoint(tablet) {
+      height: 30px;
+      background: #e3e3e3;
+      border-radius: 10px;
+      margin: 10px 10px;
+    }
+  }
+}

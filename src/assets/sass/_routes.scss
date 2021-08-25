@@ -1,0 +1,17 @@
+.Routes__Nav {
+  @include breakpoint(tablet) {
+    background-color: #f7f7f7;
+    width: 25%;
+    height: 95vh;
+    float: left;
+    clear: both;
+    position: fixed;
+  }
+}
+
+.Routes__Main {
+  @include breakpoint(tablet) {
+    width: 75%;
+    float: right;
+  }
+}

@@ -1,0 +1,37 @@
+.form__section {
+  width: 90%;
+
+  @include breakpoint(tablet) {
+    width: 70%;
+  }
+
+  @include breakpoint(desktop) {
+    width: 40%;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+
+    .form__input {
+      padding: 10px;
+      margin: 10px 0;
+      box-shadow: 4px 7px 8px 5px #555;
+      border: none;
+      font-size: 30px;
+      border-radius: 10px;
+    }
+
+    .btn__login {
+      background: $color_primary_green;
+      color: $color_white;
+      margin: 10px 0;
+      font-size: 30px;
+      font-weight: 900;
+      border-radius: 10px;
+      padding: 10px;
+      border: none;
+      width: 100%;
+    }
+  }
+}
