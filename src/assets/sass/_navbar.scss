@@ -136,12 +136,18 @@
         font-weight: 500;
       }
 
+      @include breakpoint(tablet_portrait) {
+        transform:  translateY(485%);
+        font-size: 32px;
+        font-weight: 500;
+      }
+
       
     }
 
     .nav__items {
       &.active {
-        transform: translateY(224%);
+        transform: translateY(221%);
       }
 
       @include breakpoint(tablet) {
