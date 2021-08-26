@@ -175,12 +175,25 @@
     width: 250px;
   }
 
+  @include breakpoint(desktop) {
+    height: 250px;
+    margin: 20px 0;
+    width: 400px;
+  }
+
   .heatmap__image {
     @include breakpoint(tablet) {
       margin-right: 10px;
       height: 200px;
       border-radius: 50%;
       background: #e3e3e3;
+    }
+
+    @include breakpoint(desktop) {
+      margin-right: 10px;
+      height: 200px;
+      background: #e3e3e3;
+      border-radius: 12px;
     }
   }
 
@@ -190,6 +203,13 @@
       background: #e3e3e3;
       border-radius: 10px;
       margin: 10px 10px;
+    }
+
+    @include breakpoint(desktop) {
+      height: 20px;
+      background: #e3e3e3;
+      border-radius: 5px;
+      margin: 10px 10px 10px 0;
     }
   }
 }
@@ -201,10 +221,24 @@
     padding: 1rem;
   }
 
+  @include breakpoint(desktop) {
+    height: 300px;
+    width: 1170px;
+    padding: 3rem;
+  }
+
   .heatmap__details-up {
     @include breakpoint(tablet) {
       display: flex;
-      width: 530px;;
+      width: 530px;
+    }
+
+    @include breakpoint(desktop) {
+      display: flex;
+      width: 1130px;
+      justify-content: space-around;
+      justify-content: center;
+      align-items: center;
     }
     
     .heatmap__details-img {
@@ -215,10 +249,25 @@
         background: #e3e3e3;
         margin: 0 12px 0 0;
       }
+
+      @include breakpoint(desktop) {
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+        background: #e3e3e3;
+        margin: 0 12px 0 0;
+      }
     }
 
     .heatmap__details-title {
       @include breakpoint(tablet) {
+        height: 40px;
+        width: 200px;
+        background: #e3e3e3;
+        margin: 29px 0;
+      }
+
+      @include breakpoint(desktop) {
         height: 40px;
         width: 200px;
         background: #e3e3e3;
@@ -235,8 +284,24 @@
       width: 540px;
     }
 
+    @include breakpoint(desktop) {
+      margin-top: 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 1140px;
+    }
+
     .title1 {
       @include breakpoint(tablet) {
+        width: 500px;
+        background: #e3e3e3;
+        height: 75px;
+        border-radius: 10px;
+      }
+
+      @include breakpoint(desktop) {
         width: 500px;
         background: #e3e3e3;
         height: 75px;
@@ -252,10 +317,25 @@
         height: 45px;
         border-radius: 10px;
       }
+
+      @include breakpoint(desktop) {
+        margin: 20px 0;
+        width: 300px;
+        background: #e3e3e3;
+        height: 45px;
+        border-radius: 10px;
+      }
     }
 
     .title3 {
       @include breakpoint(tablet) {
+        width: 300px;
+        background: #e3e3e3;
+        height: 45px;
+        border-radius: 10px;
+      }
+
+      @include breakpoint(desktop) {
         width: 300px;
         background: #e3e3e3;
         height: 45px;
@@ -268,14 +348,30 @@
 .heatmap__appointments {
   @include breakpoint(tablet) {
     width: 550px;
+    height: 325px;
+    display: flex;
+  }
+
+  @include breakpoint(desktop) {
+    width: 350px;
     height: 225px;
     display: flex;
+    flex-direction: column;
   }
   .heatmap__app-img {
     @include breakpoint(tablet) {
       width: 350px;
       height: 201px;
       background: #e3e3e3;
+      border-radius: 12px;
+    }
+
+    @include breakpoint(desktop) {
+      width: 350px;
+      height: 150px;
+      background: #e3e3e3;
+      border-radius: 12px;
+      margin-bottom: 10px;
     }
   }
 
@@ -287,6 +383,15 @@
       height: 45px;
       border-radius: 10px;
     }
+
+    @include breakpoint(desktop) {
+      width: 180px;
+      margin: 0 5px;
+      background: #e3e3e3;
+      height: 25px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
   }
 
   .heatmap__title3 {
@@ -295,6 +400,14 @@
       margin: 15px 5px;
       background: #e3e3e3;
       height: 45px;
+      border-radius: 10px;
+    }
+
+    @include breakpoint(desktop) {
+      width: 180px;
+      margin: 15px 5px;
+      background: #e3e3e3;
+      height: 15px;
       border-radius: 10px;
     }
   }
