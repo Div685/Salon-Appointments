@@ -234,7 +234,7 @@
       flex-direction: column;
       width: 540px;
     }
-    
+
     .title1 {
       @include breakpoint(tablet) {
         width: 500px;
@@ -261,6 +261,41 @@
         height: 45px;
         border-radius: 10px;
       }
+    }
+  }
+}
+
+.heatmap__appointments {
+  @include breakpoint(tablet) {
+    width: 550px;
+    height: 225px;
+    display: flex;
+  }
+  .heatmap__app-img {
+    @include breakpoint(tablet) {
+      width: 350px;
+      height: 201px;
+      background: #e3e3e3;
+    }
+  }
+
+  .heatmap__title2 {
+    @include breakpoint(tablet) {
+      width: 180px;
+      margin: 0 5px;
+      background: #e3e3e3;
+      height: 45px;
+      border-radius: 10px;
+    }
+  }
+
+  .heatmap__title3 {
+    @include breakpoint(tablet) {
+      width: 180px;
+      margin: 15px 5px;
+      background: #e3e3e3;
+      height: 45px;
+      border-radius: 10px;
     }
   }
 }
