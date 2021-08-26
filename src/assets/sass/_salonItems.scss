@@ -193,3 +193,74 @@
     }
   }
 }
+
+.heatmap__details {
+  @include breakpoint(tablet) {
+    height: 300px;
+    width: 570px;
+    padding: 1rem;
+  }
+
+  .heatmap__details-up {
+    @include breakpoint(tablet) {
+      display: flex;
+      width: 530px;;
+    }
+    
+    .heatmap__details-img {
+      @include breakpoint(tablet) {
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+        background: #e3e3e3;
+        margin: 0 12px 0 0;
+      }
+    }
+
+    .heatmap__details-title {
+      @include breakpoint(tablet) {
+        height: 40px;
+        width: 200px;
+        background: #e3e3e3;
+        margin: 29px 0;
+      }
+    }
+  }
+
+  .heatmap__appointment {
+    @include breakpoint(tablet) {
+      margin-top: 4rem;
+      display: flex;
+      flex-direction: column;
+      width: 540px;
+    }
+    
+    .title1 {
+      @include breakpoint(tablet) {
+        width: 500px;
+        background: #e3e3e3;
+        height: 75px;
+        border-radius: 10px;
+      }
+    }
+
+    .title2 {
+      @include breakpoint(tablet) {
+        margin: 20px 0;
+        width: 300px;
+        background: #e3e3e3;
+        height: 45px;
+        border-radius: 10px;
+      }
+    }
+
+    .title3 {
+      @include breakpoint(tablet) {
+        width: 300px;
+        background: #e3e3e3;
+        height: 45px;
+        border-radius: 10px;
+      }
+    }
+  }
+}

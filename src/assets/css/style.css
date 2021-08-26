@@ -1,4 +1,3 @@
-/* stylelint-disable */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .Routes__Nav {
     background-color: #f7f7f7;
@@ -420,6 +419,29 @@
     background: #e3e3e3;
     border-radius: 10px;
     margin: 10px 10px; } }
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .heatmap__details {
+    height: 300px;
+    width: 570px;
+    padding: 1rem; } }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .heatmap__details .heatmap__details-up {
+    display: flex;
+    width: 530px; } }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .heatmap__details .heatmap__details-up .heatmap__details-img {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background: #e3e3e3;
+    margin: 0 12px 0 0; } }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .heatmap__details .heatmap__details-up .heatmap__details-title {
+    height: 40px;
+    width: 200px;
+    background: #e3e3e3;
+    margin: 29px 0; } }
 
 .itemDetails {
   display: flex;
