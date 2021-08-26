@@ -169,6 +169,11 @@
 }
 
 .heatmap__items {
+  height: 250px;
+  margin: 20px 0;
+  width: 100%;
+  padding: 10px;
+
   @include breakpoint(tablet) {
     height: 250px;
     margin: 20px 0;
@@ -182,6 +187,14 @@
   }
 
   .heatmap__image {
+    width: 100%;
+    padding: 10px;
+    border-radius: 24px;
+    max-height: 250px;
+    transition: 0.3s;
+    height: 200px;
+    background: #e3e3e3;
+
     @include breakpoint(tablet) {
       margin-right: 10px;
       height: 200px;
@@ -198,6 +211,11 @@
   }
 
   .heatmap__title {
+    height: 30px;
+    background: #e3e3e3;
+    border-radius: 10px;
+    margin: 10px 10px;
+
     @include breakpoint(tablet) {
       height: 30px;
       background: #e3e3e3;
@@ -215,6 +233,10 @@
 }
 
 .heatmap__details {
+  height: 300px;
+  width: 100%;
+  padding: 10px;
+
   @include breakpoint(tablet) {
     height: 300px;
     width: 570px;
@@ -228,6 +250,10 @@
   }
 
   .heatmap__details-up {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
     @include breakpoint(tablet) {
       display: flex;
       width: 530px;
@@ -242,6 +268,11 @@
     }
 
     .heatmap__details-img {
+      height: 200px;
+      width: 100%;
+      border-radius: 12px;
+      background: #e3e3e3;
+
       @include breakpoint(tablet) {
         height: 300px;
         width: 300px;
@@ -260,6 +291,10 @@
     }
 
     .heatmap__details-title {
+      height: 40px;
+      background: #e3e3e3;
+      margin: 29px 0;
+
       @include breakpoint(tablet) {
         height: 40px;
         width: 200px;
@@ -277,6 +312,10 @@
   }
 
   .heatmap__appointment {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+
     @include breakpoint(tablet) {
       margin-top: 4rem;
       display: flex;
@@ -294,6 +333,10 @@
     }
 
     .title1 {
+      background: #e3e3e3;
+      height: 75px;
+      border-radius: 10px;
+
       @include breakpoint(tablet) {
         width: 500px;
         background: #e3e3e3;
@@ -310,6 +353,11 @@
     }
 
     .title2 {
+      background: #e3e3e3;
+      height: 75px;
+      border-radius: 10px;
+      margin: 20px 0;
+
       @include breakpoint(tablet) {
         margin: 20px 0;
         width: 300px;
@@ -346,6 +394,9 @@
 }
 
 .heatmap__appointments {
+  height: 225px;
+  display: flex;
+
   @include breakpoint(tablet) {
     width: 550px;
     height: 325px;
@@ -360,6 +411,12 @@
   }
 
   .heatmap__app-img {
+    height: 150px;
+    width: 165px;
+    width: 100%;
+    background: #e3e3e3;
+    border-radius: 12px;
+
     @include breakpoint(tablet) {
       width: 350px;
       height: 201px;
@@ -377,6 +434,12 @@
   }
 
   .heatmap__title2 {
+    background: #e3e3e3;
+    height: 45px;
+    border-radius: 10px;
+    width: 180px;
+    margin: 0 5px;
+
     @include breakpoint(tablet) {
       width: 180px;
       margin: 0 5px;
@@ -396,6 +459,12 @@
   }
 
   .heatmap__title3 {
+    background: #e3e3e3;
+    height: 45px;
+    border-radius: 10px;
+    width: 180px;
+    margin: 5px 5px;
+
     @include breakpoint(tablet) {
       width: 180px;
       margin: 15px 5px;
