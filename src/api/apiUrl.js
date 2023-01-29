@@ -1,3 +1,3 @@
-const apiUrl = 'https://salon-appointment-api.herokuapp.com/api/v1';
+const apiUrl = 'hhttps://salonrailsapi.onrender.com/api/v1';
 
 export default apiUrl;
