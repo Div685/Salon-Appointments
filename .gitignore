@@ -24,3 +24,5 @@ yarn-error.log*
 
 .vscode
 .sass-cache
+.firebase/
+.firebaserc

@@ -31,3 +31,13 @@ export const bookAppointment = async (date, id, userId, branch) => {
     .then((response) => store.dispatch(addAppointments(response.data))).catch((error) => error);
   return response;
 };
+
+export const fetchUserCoupons = async (couponCode) => {
+  const response = await authAxios(cookie.load('token')).post('user/coupons', {
+    coupon: {
+      code: couponCode,
+    },
+  })
+    .then((response) => response.data).catch((error) => error);
+  return response;
+};
