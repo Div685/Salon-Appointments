@@ -6,6 +6,10 @@ const authAxios = (token = null) => axios.create({
   data: {},
   headers: {
     'Content-Type': 'application/json',
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Headers': '*',
     Authorization: `Bearer ${token}`,
   },
 });
